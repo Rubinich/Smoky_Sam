@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Smokey Sam Restaurant</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: 'empty',
+                blockHeadless: true,
+            });
+        })();
+    </script>
+    <!--CSS_acc-->
+</head>
+
+<body>
+    <div id="custom-alert" style="display: none; position: fixed; z-index: 5; top: 0; width: 100%; height: 100%; 
+        overflow: auto; background-color: rgba(0, 0, 0, 0.5);">
+        <div style="display: flex; justify-content: space-evenly; align-items: center; 
+            background-color: #FFD700; margin: 1.5em auto;
+            width: 90%; min-height: 100px; text-align: right; border-radius: 1em 0 1em 0 ;">
+            <p id="alert-message" style="color: #000000; width: 80%; text-align: left; padding-inline: 1em;"></p>
+            <img src="./assets/icons/close_menu.svg" style="font-weight: bold; height: 40px; cursor: pointer;"
+                onclick="closeAlert()">
+        </div>
+    </div>
+    <header>
+        <div class="container-header">
+            <!--<img src="" alt="">-->
+            <h1>Smokey Sam</h1>
+            <nav class="desktop-layout-menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <button class="open-button" id="openButton"><img src="./assets/icons/open_menu.svg" alt=""></button>
+            <nav class="mobile-layout-menu" aria-expanded="false">
+                <button class="close-button" id="closeButton"><img src="./assets/icons/close_menu.svg" alt=""></button>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container-main-contact">
+            <section class="main-contact-section">
+                <div class="main-contact-section-wrapper">
+                    <img id="bg_image" src="./assets/images/background_dish/hard_textured_black_wall.webp" alt="">
+                    <div class="text-container-contact-layout">
+                        <div class="text-container-contact">
+                            <h2>We're Here to Help</h2>
+                            <h3>Leave your feedback below, our ask our team to help you</h3>
+                        </div>
+                        <img id="arrow_down" src="./assets/icons/arrow_down.svg" alt="">
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="main-info">
+                <div class="main-info-wrapper">
+                    <div class="main-info-text">
+                        <h2>Restaurant Smoky Sam</h2>
+                        <p>
+                            Phone number: <a href="tel:+385976245764">+385 97 624 5764</a><br>
+                            Email: <a href="mailto:contact.smokysam@gmail.com">contact.smokysam@gmail.com</a><br>
+                            Address: <a id="address">Ulica Ivana Perkovca 108, 10430, Samobor</a>
+                        </p>
+                    </div>
+                    <div class="main-info-location">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2478.179541443314!2d15.71994099647565!3d45.79799068996092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765cc0e1b36fadb%3A0xda21cac1e5912250!2sUl.%20Ivana%20Perkovca%20108%2C%2010430%2C%20Samobor!5e0!3m2!1shr!2shr!4v1710188555827!5m2!1shr!2shr"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </section>
+            <section class="main-contact">
+                <div class="main-contact-wrapper">
+                    <div class="main-contact-text">
+                        <h2>Have a question?<br><span>We're here to help!</span></h2>
+                        <p> Our friendly staff is ready to answer your questions and address any concerns you may have.
+                            Fill out the form below and we'll be in touch shortly</p>
+                    </div>
+                    <form class="main-contact-form">
+                        <input type="text" id="first-name-contact" class="main-news-input" placeholder="First name"
+                            required>
+                        <input type="text" id="last-name-contact" class="main-news-input" placeholder="Last name"
+                            required>
+                        <input type="tel" id="phone-number-contact" class="main-news-input" placeholder="Phone number">
+                        <input type="email" id="email-contact" class="main-news-input" placeholder="Email" required>
+                        <textarea type="text" id="message-contact" class="main-news-input" placeholder="Message"
+                            required style="min-height: 200px;"></textarea>
+                        <button type="button" id="submit-contact">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container-footer">
+            <div class="footer-left">
+                <div class="footer-header">
+                    <h2>Smoky Sam</h2>
+                </div>
+                <div class="footer-para">
+                    <p>Where smoke meets flavor
+                    </p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about_us.html">ABOUT US</a></li>
+                        <li><a href="menu.html">MENU</a></li>
+                        <li><a href="">CONTACT US</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="add">
+            <div id="copyright">
+                <p>&#169; Copyright Smoky Sam 2024.</p>
+            </div>
+            <div id="privacy">
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

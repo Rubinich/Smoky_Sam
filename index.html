@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Smoky Sam Restaurant</title>
+    <!--https://www.emailjs.com/docs/sdk/installation/-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: 'empty',
+                blockHeadless: true,
+            });
+        })();
+    </script>
+    <!--AR_acc-->
+</head>
+
+<body>
+    <div id="custom-alert" style="display: none; position: fixed; z-index: 5; top: 0; width: 100%; height: 100%; 
+        overflow: auto; background-color: rgba(0, 0, 0, 0.5);">
+        <div style="display: flex; justify-content: space-evenly; align-items: center; 
+            background-color: #FFD700; margin: 1.5em auto;
+            width: 90%; min-height: 100px; text-align: right; border-radius: 1em 0 1em 0 ;">
+            <p id="alert-message" style="color: #000000; width: 80%; text-align: left; padding-inline: 1em;"></p>
+            <img src="./assets/icons/close_menu.svg" style="font-weight: bold; height: 40px; cursor: pointer;"
+                onclick="closeAlert()">
+        </div>
+    </div>
+    <header>
+        <div class="container-header">
+            <!--<img src="" alt="">-->
+            <h1>Smoky Sam</h1>
+            <nav class="desktop-layout-menu">
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="contact_us.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <button class="open-button" id="openButton"><img src="./assets/icons/open_menu.svg" alt=""></button>
+            <nav class="mobile-layout-menu" aria-expanded="false">
+                <button class="close-button" id="closeButton"><img src="./assets/icons/close_menu.svg" alt=""></button>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="contact_us.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container-main-index">
+            <section class="main-gallery">
+                <div class="main-gallery-wrapper">
+                    <img id="bg_image" src="./assets/images/dish/close_meat.webp" alt="">
+                    <div class="text-container-layout">
+                        <div class="text-container">
+                            <h2>Welcome to Smoky Sam</h2>
+                            <h3>Transforming cuts into smoky sensations</h3>
+                        </div>
+                        <img id="arrow_down" src="./assets/icons/arrow_down.svg" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="main-prepare">
+                <div class="main-prepare-wrapper">
+                    <div class="main-prepare-image-layout">
+                        <figure id="main-prepare-image-layout-item1">
+                            <img src="./assets/images/dish/seasoning_v.webp" alt="">
+                            <figcaption>Seasoning a steak with salt and pepper before grilling</figcaption>
+                        </figure>
+                        <figure id="main-prepare-image-layout-item2">
+                            <img src="./assets/images/dish/seasoning2_h.webp" alt="">
+                            <figcaption>Keeping it clean, from prep to plate</figcaption>
+                        </figure>
+                        <figure id="main-prepare-image-layout-item3">
+                            <img src="./assets/images/dish/seasoning3_h.webp" alt="">
+                            <figcaption>Fresh meat, handled with care</figcaption>
+                        </figure>
+                    </div>
+                    <div class="main-prepare-text-layout">
+                        <h2>Sizzle & Savor<br><span>Where Health Meets Flavor</span></h2>
+                        <p>At Smoky Sam, fire fuels flavor, igniting your taste buds with a symphony of spices. We
+                            believe seasoning isn't just about taste, but unlocking the natural potential of food,
+                            boosting its health, and creating an unforgettable culinary journey.
+                            <br><br>
+                            Our curated dishes, grilled, smoked, and seasoned to perfection, transcend mere
+                            deliciousness. We source nutrient-rich ingredients and prepare them with techniques that
+                            preserve their goodness. Savor tender meats, juicy veggies, and vibrant sides, bursting with
+                            flavor without sacrificing well-being.
+                            <br><br>
+                            Explore our menu and discover a world where health and flavor dance on your plate. Each bite
+                            is an orchestra of carefully chosen spices, slow-cooked perfection, and the irresistible
+                            smoky kiss of fire.
+                        </p>
+                        <a href="menu.html">What's cooking</a>
+                    </div>
+                </div>
+            </section>
+            <section class="main-story">
+                <div class="main-story-wrapper">
+                    <img src="./assets/images/top_secret.png" alt="">
+                    <div class="main-story-text">
+                        <h2>The Smoky Secrets<br><span>What's Behind Our Success</span></h2>
+                        <p>Have you ever wondered what makes Smoky Sam's smoked meats so irresistible? Click below to
+                            embark on a delicious journey and discover the secret blend of spices, the generations-old
+                            smoking process, and the captivating story behind it all.</p>
+                        <a href="about_us.html">Tell me a story</a>
+                    </div>
+                </div>
+            </section>
+            <section class="main-limited-gallery">
+                <div class="main-limited-gallery-wrapper">
+                    <div class="main-limited-gallery-text-layout">
+                        <div class="main-limited-text">
+                            <h2>Fuel your flavor<br><span>Limited edition meat & drinks</span></h2>
+                            <p>Craving the rich, complex flavors of smoke-kissed meats and vegetables? Look no further!
+                                We're firing up the smoker and offering a tantalizing selection of limited-time smoked
+                                specials. From fall-off-the-bone ribs glazed with our signature sauce to
+                                melt-in-your-mouth brisket and even smoky, unexpected delights, our culinary team is
+                                bringing the heat (and flavor!) to your plate.
+                                <br><br>
+                                These exclusive offerings are only available for a short time, so don't miss your chance
+                                to experience the magic of smoke. Indulge yourself and explore the depth of flavor in
+                                our unique smoked creations!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-limited-gallery-layout">
+                        <div class="limited-card-nav">
+                            <div class="btn active"></div>
+                            <div class="btn"></div>
+                            <div class="btn"></div>
+                            <div class="btn"></div>
+                        </div>
+                        <div class="limited-card active">
+                            <img src="./assets/images/slide_dish/15.webp" alt="">
+                            <figcaption>Firehouse Subs Brisket Sandwich</figcaption>
+                        </div>
+                        <div class="limited-card">
+                            <img src="./assets/images/drinks/8.webp" alt="">
+                            <figcaption>Bundaberg Ginger Beer</figcaption>
+                        </div>
+                        <div class="limited-card">
+                            <img src="./assets/images/slide_dish/13.webp" alt="">
+                            <figcaption>Dr. Pepper-Glazed Brisket</figcaption>
+                        </div>
+                        <div class="limited-card">
+                            <img src="./assets/images/drinks/7.webp" alt="">
+                            <figcaption>Americano cocktail</figcaption>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-news">
+                <div class="main-news-wrapper">
+                    <div class="main-news-text">
+                        <h2>Stay in the smoke!</h2>
+                        <p>Want to be the first to know about our latest smoked creations? Sign
+                            up for our email updates and we'll send them straight to your inbox.</p>
+                    </div>
+                    <form class="main-news-form">
+                        <input type="text" id="first-name-news" class="main-news-input" placeholder="First name"
+                            required>
+                        <input type="text" id="last-name-news" class="main-news-input" placeholder="Last name" required>
+                        <input type="email" id="email-news" class="main-news-input" placeholder="Email address"
+                            required>
+                        <button type="button" id="submit-news">Subscribe</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container-footer">
+            <div class="footer-left">
+                <div class="footer-header">
+                    <h2>Smoky Sam</h2>
+                </div>
+                <div class="footer-para">
+                    <p>Where smoke meets flavor
+                    </p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <nav>
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="about_us.html">ABOUT US</a></li>
+                        <li><a href="menu.html">MENU</a></li>
+                        <li><a href="contact_us.html">CONTACT US</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="add">
+            <div id="copyright">
+                <p>&#169; Copyright Smoky Sam 2024.</p>
+            </div>
+            <div id="privacy">
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

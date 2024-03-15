@@ -1,0 +1,58 @@
+@import url(style.css);
+
+
+.main-info-wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin: var(--content-margin-h) auto;
+    max-width: 100%;
+}
+.main-info-text{
+    width: 30%;
+}
+.main-info-text h2{
+    font-family: "oswald-semibold", system-ui;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin: 0.5em 0;
+    text-transform: uppercase;
+}
+.main-info-text a{
+    font-size: var(--font-size-default);
+    color: var(--clr-light-grey);
+}
+.main-info-text a:hover:not(#address){
+    text-decoration: underline;
+}
+.main-info-text p{
+    font-size: 1.125rem;
+}
+.main-info-location{
+    width: 50%;
+}
+.main-info-location iframe{
+    width: 100%;    
+    height: 25em;
+    margin: 0 auto;
+}
+@media (max-width: 768px){
+    .main-info-wrapper{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: var(--content-margin-v) 1.5em;
+    }
+    .main-info-location{
+        width: 100%;
+    }
+    .main-info-text{
+        width: 80%;
+        text-align: center;
+        margin-block-end: 3em;
+    }
+    .main-info-location iframe{
+        width: 100%;
+    }
+}
+
