@@ -626,7 +626,7 @@ main{
     height: 100%;
     text-align: center;
     background-color: var(--clr-black);
-    color: var(--clr-yellow);
+    color: var(--clr-white);
     padding: 0.5em 1em;
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     font-size: var(--fluid-14-16);
@@ -643,7 +643,7 @@ main{
 }
 
 .limited-card-nav .btn {
-    background-color: rgba(255, 215, 0, 0.5);
+    background-color: rgba(252, 252, 252, 0.5);
     width: 0.9em;
     height: 0.9em;
     margin: 0.4em 0.4em;
@@ -653,7 +653,7 @@ main{
 }
 
 .limited-card-nav .btn:hover {
-    background-color: var(--clr-yellow);
+    background-color: var(--clr-white);
 }
 
 .limited-card-nav .btn:active {
@@ -661,7 +661,7 @@ main{
 }
 
 .limited-card-nav .btn.active {
-    background-color: var(--clr-yellow);
+    background-color: var(--clr-white);
 }
 @media (max-width: 424px){
     .main-limited-gallery-layout{
