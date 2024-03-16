@@ -178,7 +178,7 @@ button {
     translate: 0;
 }
 .mobile-layout-menu[aria-expanded="false"] {
-    translate: 100vw;
+    translate: 100%;
 }
 .open-button,
 .mobile-layout-menu .close-button {
