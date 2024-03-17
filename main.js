@@ -5,13 +5,14 @@ const submitNews = document.getElementById("submit-news");
 const submitContact = document.getElementById("submit-contact");
 const slides = document.querySelectorAll(".limited-card");
 const btns = document.querySelectorAll(".btn");
-const layout = document.querySelector('.main-limited-gallery-layout');
-const activeCard = document.querySelector('.limited-card.active');
+const layout = document.querySelector(".main-limited-gallery-layout");
+const activeCard = document.querySelector(".limited-card.active");
 let isOpenMenuComplete;
 let isCloseMenuComplete;
-const arrow_down = document.getElementById('arrow_down');
-const mainPrepareSection = document.querySelector('.main-prepare');
+const arrow_down = document.getElementById("arrow_down");
+const mainPrepareSection = document.querySelector(".main-prepare");
 const mainContactSection = document.querySelector(".main-info");
+/*const mainAboutSection = document.querySelector(".");*/
 
 if (openBtn) {
     openBtn.addEventListener("click", openMenu);
@@ -26,19 +27,22 @@ if (submitContact) {
     submitContact.addEventListener("click", sendMail);
 }
 if (arrow_down) {
-    arrow_down.addEventListener('click', () => {
-        if (window.location.href.includes('index')) {
-            mainPrepareSection.scrollIntoView({ behavior: 'smooth' });
-        } else if (window.location.href.includes('contact')) {
-            mainContactSection.scrollIntoView({ behavior: 'smooth' });
+    arrow_down.addEventListener("click", () => {
+        if (window.location.href.includes("index")) {
+            mainPrepareSection.scrollIntoView({ behavior: "smooth" });
+        } else if (window.location.href.includes("contact")) {
+            mainContactSection.scrollIntoView({ behavior: "smooth" });
         }
+        /*else if (window.location.href.includes("about")){
+            mainAboutSection.scrollIntoView({ behavior: "smooth"});
+        }*/
     });
 }
 
 
-window.addEventListener('resize', dynamicHeightUpdate);
-window.addEventListener('resize', setHeight);
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener("resize", dynamicHeightUpdate);
+window.addEventListener("resize", setHeight);
+document.addEventListener("DOMContentLoaded", function () {
     dynamicHeightUpdate();
     setHeight();
 });
@@ -160,19 +164,19 @@ function dynamicHeightUpdate() {
 }
 
 function setHeight() {
-    const imageIndex = document.getElementById('bg_image');
-    const containerHeader = document.querySelector('.container-header');
+    const imageIndex = document.getElementById("bg_image");
+    const containerHeader = document.querySelector(".container-header");
 
     if (imageIndex && containerHeader) {
         const topOffset = window.innerHeight - window.document.documentElement.clientHeight;
         let dynamicHeaderHeight;
         const computedStyles = window.getComputedStyle(containerHeader);
         if (window.innerWidth <= 768) {
-            dynamicHeaderHeight = parseInt(computedStyles.getPropertyValue('--header-height-phone-tablet'));
+            dynamicHeaderHeight = parseInt(computedStyles.getPropertyValue("--header-height-phone-tablet"));
         } else if (window.innerWidth <= 1023) {
-            dynamicHeaderHeight = parseInt(computedStyles.getPropertyValue('--header-height-tablet-laptop'));
+            dynamicHeaderHeight = parseInt(computedStyles.getPropertyValue("--header-height-tablet-laptop"));
         } else {
-            dynamicHeaderHeight = parseInt(computedStyles.getPropertyValue('--header-height-default'));
+            dynamicHeaderHeight = parseInt(computedStyles.getPropertyValue("--header-height-default"));
         }
         const height = window.innerHeight - topOffset - dynamicHeaderHeight;
         imageIndex.style.height = `${height}px`;

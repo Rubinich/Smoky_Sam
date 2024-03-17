@@ -39,7 +39,8 @@
     --clr-white: #FCFCFC;
     --clr-yellow: #FFD700;
     --clr-black: #000000;
-    --clr-light-grey: #61677A;
+    --clr-grey: #61677A;
+    --clr-light-grey: #A9A9A9
 }
 @font-face {
     font-family: "oswald-bold";
@@ -538,7 +539,7 @@ main{
         margin: 1.5em auto;
     }
     .main-prepare-text-layout{
-        width: 95%;
+        width: 100%;
         margin-block-end: 1.5em;
     }
     .main-prepare-image-layout{
@@ -738,13 +739,14 @@ main{
 .main-story-text h2, .main-contact-text h2, .main-news-text h2{
     font-family: "Helvetica", system-ui;
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     line-height: 1.1;
     text-transform: uppercase;
 }
-.main-story-text span, .main-contact-text span{
+.main-story-text span, .main-contact-text span, .main-news-text span{
     font-family: "oswald-semibold", system-ui;
     font-weight: 600;
+    font-size: 2rem;
     text-transform: uppercase;
 }
 .main-story-text p, .main-news-text p, .main-contact-text p{
@@ -948,7 +950,7 @@ footer {
     font-weight: 600;
 }
 .container-main-privacy a{
-    color: var(--clr-light-grey);
+    color: var(--clr-grey);
 }
 .container-main-privacy a:hover{
     text-decoration: underline;
@@ -995,7 +997,7 @@ footer {
 }
 .main-info-text a{
     font-size: var(--font-size-default);
-    color: var(--clr-light-grey);
+    color: var(--clr-grey);
 }
 .main-info-text a:hover:not(#address){
     text-decoration: underline;

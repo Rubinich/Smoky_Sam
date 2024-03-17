@@ -1,3 +1,104 @@
 @import url(style.css);
 
 
+.main-about-ogs-wrapper {
+    display: block;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: var(--content-margin-v) 1.5em;
+}
+
+.main-about-ogs-text {
+    display: block;
+    max-width: 100%;
+    margin: 1.2em 2em;
+    outline: 3px solid blue;
+}
+.main-about-ogs-text h2{
+
+}
+.main-about-ogs-text p{
+
+}
+
+
+.main-about-ogs-card {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1em;
+    flex-wrap: wrap;
+    /*outline: 3px solid green;*/
+}
+
+.emp1,
+.emp2,
+.emp3,
+.emp4,
+.emp5,
+.emp6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    background-image: url(./assets/images/background_dish/soft_textured_black_wall.webp);
+}
+
+.emp-text{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-block: 0 0.75em;
+    padding-inline: 0.25em;
+}
+.emp-text h3,p{
+    font-family: "oswald-regular", system-ui;
+    font-weight: 400;
+}
+.emp-text h3{
+    font-size: 1.8rem;
+    color: var(--clr-yellow);
+}
+.emp-text p{
+    font-size: 1.2rem;
+    color: var(--clr-white);
+}
+
+.emp-img {
+    width: 300px;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 1.2em;
+    /*outline: 5px solid var(--clr-yellow);*/
+}
+
+.emp1 .emp-img {
+    background-image: url(./assets/images/employers/founder.png);
+    background-position-x: 50%;
+}
+
+.emp2 .emp-img {
+    background-image: url(./assets/images/employers/manager.png);
+    background-position-x: 52.5%;
+}
+
+.emp3 .emp-img {
+    background-image: url(./assets/images/employers/chef.png);
+    background-position-x: 50%;
+}
+
+.emp4 .emp-img {
+    background-image: url(./assets/images/employers/exe_chef.png);
+    background-position-x: 50%;
+}
+
+.emp5 .emp-img {
+    background-image: url(./assets/images/employers/waitres.png);
+    background-position-x: 47.5%;
+}
+.emp6 .emp-img {
+    background-image: url(./assets/images/employers/server.png);
+    background-position-x: 57.5%;
+}
