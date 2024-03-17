@@ -25,6 +25,8 @@
 .main-about-ogs-card {
     display: grid;
     place-items: center;
+    align-content: center;
+    justify-content: center;
     grid-template-columns: repeat(3, 1fr);
     gap: 2em;
     /*outline: 3px solid green;*/
@@ -50,6 +52,7 @@
     text-align: center;
     margin-block: 0 0.75em;
     padding-inline: 0.25em;
+    line-height: 1.3;
 }
 .emp-text h3,p{
     font-family: "oswald-regular", system-ui;
@@ -65,12 +68,11 @@
 }
 
 .emp-img {
-    width: 220px;
+    width: 300px;
     aspect-ratio: 1 / 1;
     background-size: cover;
     border-radius: 50%;
     margin: 1.2em;
-    /*outline: 5px solid var(--clr-yellow);*/
 }
 
 .emp1 .emp-img {
@@ -106,4 +108,14 @@
     .main-about-ogs-card{
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     }
+    .emp-img{
+        width: 200px;
+    }
+    .emp-text h3{
+        font-size: 1.6rem;
+    }
+    .emp-text p{
+        font-size: 1rem;
+    }
+    
 }

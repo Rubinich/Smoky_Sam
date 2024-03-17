@@ -417,8 +417,8 @@ main{
         height: calc(100vh - var(--header-height-phone-tablet));
     }
     .main-gallery-wrapper #arrow_down, .main-contact-section-wrapper #arrow_down{
-        width: 45px;
-        height: 45px;
+        width: 50px;
+        height: 50px;
     }
 }
 @media (min-width: 769px) and (max-width: 1023px){
@@ -426,8 +426,8 @@ main{
         height: calc(100vh - var(--header-height-tablet-laptop));
     }
     .main-gallery-wrapper #arrow_down, .main-contact-section-wrapper #arrow_down{
-        width: 45px;
-        height: 45px;
+        width: 50px;
+        height: 50px;
     }
 }
 /************************************MAIN-GALLERY-INDEX************************************/
