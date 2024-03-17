@@ -104,12 +104,13 @@
     background-position-x: 57.5%;
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1140px){
     .main-about-ogs-card{
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 1em;
     }
     .emp-img{
-        width: 200px;
+        width: 250px;
     }
     .emp-text h3{
         font-size: 1.6rem;
