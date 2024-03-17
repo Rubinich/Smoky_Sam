@@ -25,9 +25,8 @@
 .main-about-ogs-card {
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 1em;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
     /*outline: 3px solid green;*/
 }
 
@@ -66,7 +65,7 @@
 }
 
 .emp-img {
-    width: 300px;
+    width: 220px;
     aspect-ratio: 1 / 1;
     background-size: cover;
     border-radius: 50%;
@@ -101,4 +100,10 @@
 .emp6 .emp-img {
     background-image: url(./assets/images/employers/server.png);
     background-position-x: 57.5%;
+}
+
+@media (max-width: 1024px){
+    .main-about-ogs-card{
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
 }

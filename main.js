@@ -28,9 +28,9 @@ if (submitContact) {
 }
 if (arrow_down) {
     arrow_down.addEventListener("click", () => {
-        if (window.location.href.includes("index")) {
+        if (mainPrepareSection) {
             mainPrepareSection.scrollIntoView({ behavior: "smooth" });
-        } else if (window.location.href.includes("contact")) {
+        } else if (mainContactSection) {
             mainContactSection.scrollIntoView({ behavior: "smooth" });
         }
         /*else if (window.location.href.includes("about")){
