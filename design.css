@@ -11,13 +11,8 @@
 .main-about-ogs-text {
     display: block;
     max-width: 100%;
-    margin: 2em;
+    margin: 1.2em 2em;
     outline: 3px solid blue;
-}
-.main-about-ogs-text h2{
-    font-family: "oswald-semibold";
-    font-weight: 600;
-    font-size: 1.8rem;
 }
 
 .main-about-ogs-card {
@@ -104,7 +99,7 @@
 
 @media (max-width: 1140px){
     .main-about-ogs-card{
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 1em;
     }
     .emp-img{

@@ -146,27 +146,12 @@ function closeAlert() {
     alert.style.display = "none";
 }
 
-/*
-function slideChange(i) {
-    slides.forEach((slide) => slide.classList.remove("active"));
-    btns.forEach((btn) => btn.classList.remove("active"));
-
-    slides[i].classList.add("active");
-    btns[i].classList.add("active");
-}
-btns.forEach((btn, i) => btn.addEventListener("click", () => slideChange(i)));
-*/
-
-const layout = document.getElementById("carousel");
-const activeCard = document.querySelector(".limited-card.active");
-
 const buttons = document.querySelectorAll("#before-button, #after-button");
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         const offset = button.id === "after-button" ? 1 : -1;
-        const slides = document.getElementById("carousel")
-        .querySelector("#images");
-        const activeSlide = slides.querySelector("[data-active]")
+        const slides = document.getElementById("carousel").querySelector("#images");
+        const activeSlide = slides.querySelector(".active")
         let nextIndex = [...slides.children].indexOf(activeSlide) + offset
         if (nextIndex < 0) {
             nextIndex = slides.children.length - 1
@@ -174,11 +159,49 @@ buttons.forEach(button => {
         if (nextIndex >= slides.children.length) {
             nextIndex = 0
         }
-        slides.children[nextIndex].dataset.active = true
-        delete activeSlide.dataset.active
+        slides.children[nextIndex].classList.add("active");
+        activeSlide.classList.remove("active");
     })
 });
 
+
+
+
+const carousel = document.getElementById("employee-carousel");
+const slides2 = carousel.querySelectorAll(".carousel-item");
+const totalSlides = slides.length;
+let currentIndex = 0;
+
+document.getElementById("before-button").addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+});
+
+document.getElementById("after-button").addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+});
+
+function updateCarousel() {
+    const offset = -currentIndex * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
+    slides2.forEach((slide, index) => {
+        slide.classList.toggle("active", index === currentIndex);
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+const layout = document.getElementById("carousel");
+const activeCard = document.querySelector(".limited-card.active");
 function dynamicHeightUpdate() {
     if (activeCard) {
         layout.style.height = `${activeCard.clientHeight}px`;
@@ -188,7 +211,6 @@ function dynamicHeightUpdate() {
 function setHeight() {
     const imageIndex = document.getElementById("bg_image");
     const containerHeader = document.querySelector(".container-header");
-
     if (imageIndex && containerHeader) {
         const topOffset = window.innerHeight - window.document.documentElement.clientHeight;
         let dynamicHeaderHeight;
