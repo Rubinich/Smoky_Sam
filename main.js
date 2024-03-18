@@ -5,8 +5,7 @@ const submitNews = document.getElementById("submit-news");
 const submitContact = document.getElementById("submit-contact");
 const slides = document.querySelectorAll(".limited-card");
 const btns = document.querySelectorAll(".btn");
-const layout = document.querySelector(".main-limited-gallery-layout");
-const activeCard = document.querySelector(".limited-card.active");
+
 let isOpenMenuComplete;
 let isCloseMenuComplete;
 const arrow_down = document.getElementById("arrow_down");
@@ -147,7 +146,7 @@ function closeAlert() {
     alert.style.display = "none";
 }
 
-
+/*
 function slideChange(i) {
     slides.forEach((slide) => slide.classList.remove("active"));
     btns.forEach((btn) => btn.classList.remove("active"));
@@ -156,6 +155,29 @@ function slideChange(i) {
     btns[i].classList.add("active");
 }
 btns.forEach((btn, i) => btn.addEventListener("click", () => slideChange(i)));
+*/
+
+const layout = document.getElementById("carousel");
+const activeCard = document.querySelector(".limited-card.active");
+
+const buttons = document.querySelectorAll("#before-button, #after-button");
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        const offset = button.id === "after-button" ? 1 : -1;
+        const slides = document.getElementById("carousel")
+        .querySelector("#images");
+        const activeSlide = slides.querySelector("[data-active]")
+        let nextIndex = [...slides.children].indexOf(activeSlide) + offset
+        if (nextIndex < 0) {
+            nextIndex = slides.children.length - 1
+        }
+        if (nextIndex >= slides.children.length) {
+            nextIndex = 0
+        }
+        slides.children[nextIndex].dataset.active = true
+        delete activeSlide.dataset.active
+    })
+});
 
 function dynamicHeightUpdate() {
     if (activeCard) {

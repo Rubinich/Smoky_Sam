@@ -8,8 +8,6 @@
 
 :root {
     --breakpoint-mobile-m: 375px;
-    /*--breakpoint-tablet: 768px;
-    --breakpoint-laptop: 1024px;*/
 
     --header-height-phone-tablet: 90px;
     --header-height-tablet-laptop: 100px;
@@ -356,6 +354,9 @@ main{
 .main-gallery-wrapper #arrow_down:active, .main-contact-section-wrapper #arrow_down:active{
     cursor: default;
 }
+.main-gallery-wrapper #arrow_down:hover, .main-contact-section-wrapper #arrow_down:hover{
+    opacity: 1;
+}
 .text-container-layout, .text-container-contact-layout{
     display: block;
     width: 75%;
@@ -591,6 +592,48 @@ main{
     margin-block: 1.5em;
 }
 
+#carousel{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.limited-card{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 0.25s opacity ease-in-out;
+    transition-delay: 0.25s;
+}
+.limited-card > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.limited-card[data-active]{
+    opacity: 1;
+    transition-delay: 0s;
+    z-index: 1;
+}
+.carousel-button{
+    position: absolute;
+    background: none;
+    border: none;
+    z-index: 2;
+    cursor: pointer;
+}
+.carousel-button img{
+    width: 50px;
+    height: 50px;
+}
+.carousel-button.before{
+    left: 0;
+}
+.carousel-button.after{
+    right: 0;
+}
+/*
 .main-limited-gallery-layout {
     display: flex;
     flex-direction: column;
@@ -601,6 +644,8 @@ main{
 .limited-card {
     display: block;
     position: absolute;
+    top: 0;
+    right: 0;
     z-index: 1;
     max-width: 100%;
     clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
@@ -704,7 +749,7 @@ main{
         width: 55%;
         text-align: left;
     }
-}
+}*/
 /************************************MAIN-LIMITED-GALLERY-INDEX************************************/
 /************************************MAIN-NEWS-INDEX/MAIN-CONTACT-CONTACT************************************/
 .main-news-wrapper, .main-story-wrapper,.main-contact-wrapper{
