@@ -565,7 +565,6 @@ main{
 
 .main-limited-gallery-text-layout {
     display: block;
-    height: 100%;
     text-align: center;
     width: 100%;
     margin-block-end: 1.5em;
@@ -587,7 +586,7 @@ main{
     text-transform: uppercase;
 }
 
-.main-limited-text p {
+.main-limited-text h3 {
     display: block;
     margin-block: 1.5em;
 }

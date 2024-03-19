@@ -1,30 +1,28 @@
-const openBtn = document.getElementById("openButton");
-const mobileMenu = document.querySelector(".mobile-layout-menu");
-const closeBtn = document.getElementById("closeButton");
-const submitNews = document.getElementById("submit-news");
-const submitContact = document.getElementById("submit-contact");
-const slides = document.querySelectorAll(".limited-card");
-const btns = document.querySelectorAll(".btn");
-
-let isOpenMenuComplete;
-let isCloseMenuComplete;
-const arrow_down = document.getElementById("arrow_down");
-const mainPrepareSection = document.querySelector(".main-prepare");
-const mainContactSection = document.querySelector(".main-info");
 /*const mainAboutSection = document.querySelector(".");*/
 
+const openBtn = document.getElementById("openButton");
 if (openBtn) {
     openBtn.addEventListener("click", openMenu);
 }
+
+const closeBtn = document.getElementById("closeButton");
 if (closeBtn) {
     closeBtn.addEventListener("click", closeMenu);
 }
+
+const submitNews = document.getElementById("submit-news");
 if (submitNews) {
     submitNews.addEventListener("click", sendMail);
 }
+
+const submitContact = document.getElementById("submit-contact");
 if (submitContact) {
     submitContact.addEventListener("click", sendMail);
 }
+
+const arrow_down = document.getElementById("arrow_down");
+const mainPrepareSection = document.querySelector(".main-prepare");
+const mainContactSection = document.querySelector(".main-info");
 if (arrow_down) {
     arrow_down.addEventListener("click", () => {
         if (mainPrepareSection) {
@@ -38,7 +36,6 @@ if (arrow_down) {
     });
 }
 
-
 window.addEventListener("resize", dynamicHeightUpdate);
 window.addEventListener("resize", setHeight);
 document.addEventListener("DOMContentLoaded", function () {
@@ -46,6 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
     setHeight();
 });
 
+let isOpenMenuComplete;
+let isCloseMenuComplete;
+const mobileMenu = document.querySelector(".mobile-layout-menu");
 function openMenu() {
     document.body.classList.add("no-scrolling");
     openBtn.classList.add("rotate-and-hide");
@@ -165,48 +165,15 @@ buttons.forEach(button => {
 });
 
 
-
-
-const carousel = document.getElementById("employee-carousel");
-const slides2 = carousel.querySelectorAll(".carousel-item");
-const totalSlides = slides.length;
-let currentIndex = 0;
-
-document.getElementById("before-button").addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    updateCarousel();
-});
-
-document.getElementById("after-button").addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    updateCarousel();
-});
-
-function updateCarousel() {
-    const offset = -currentIndex * 100;
-    carousel.style.transform = `translateX(${offset}%)`;
-    slides2.forEach((slide, index) => {
-        slide.classList.toggle("active", index === currentIndex);
-    });
-}
-
-
-
-
-
-
-
-
-
-
-
-const layout = document.getElementById("carousel");
-const activeCard = document.querySelector(".limited-card.active");
 function dynamicHeightUpdate() {
+    const activeCard = document.querySelector(".limited-card.active");
+    const layout = document.getElementById("carousel");
     if (activeCard) {
-        layout.style.height = `${activeCard.clientHeight}px`;
+        const activeCardHeight = activeCard.clientHeight;
+        layout.style.height = `${activeCardHeight}px`;
     }
 }
+
 
 function setHeight() {
     const imageIndex = document.getElementById("bg_image");
