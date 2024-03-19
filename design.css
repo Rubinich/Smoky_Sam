@@ -10,9 +10,28 @@
 
 .main-about-ogs-text {
     display: block;
+    text-align: center;
     max-width: 100%;
-    margin: 1.2em 2em;
-    outline: 3px solid blue;
+    height: 100%;
+    margin-block: var(--content-margin-v);
+}
+
+.main-about-ogs-text h2{
+    font-family: "Helvetica", system-ui;
+    font-weight: 400;
+    font-size: var(--font-size-h2);
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.main-about-ogs-text span{
+    font-family: "oswald-semibold", system-ui;
+    font-weight: 600;
+    font-size: var(--font-size-h2-span);
+    text-transform: uppercase;
+}
+.main-about-ogs-text p{
+    margin-block: 0.75em 0;
 }
 
 .main-about-ogs-card {
