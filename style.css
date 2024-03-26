@@ -559,7 +559,6 @@ main{
     justify-content: space-around;
     align-items: flex-start;
     position: relative;
-    max-width: 100%;
 }
 
 .main-limited-gallery-text-layout {
@@ -669,7 +668,7 @@ main{
         margin: 5em 1.5em;
     }
 }
-@media (min-width: 425px) and (max-width: 767px){
+@media (min-width: 425px) and (max-width: 1024px){
     #carousel{
         width: 60%;
         margin: 0 auto;
