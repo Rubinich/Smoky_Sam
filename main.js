@@ -98,7 +98,7 @@ function sendMail(event) {
             phone_number: phone,
             message: message,
         };
-        emailjs.send("service_id", "template_id", para)
+        emailjs.send("service_uc7h4s8", "template_njcn8yl", para)
             .then(function (response) {
                 showAlert("Subscription successful!");
                 document.getElementById("first-name-contact").value = "";
@@ -120,7 +120,7 @@ function sendMail(event) {
             last_name: lastName,
             email: email,
         };
-        emailjs.send("service_id", "template_id", para)
+        emailjs.send("service_1zzkt2m", "template_3rwzcf6", para)
             .then(function (response) {
                 showAlert("Subscription successful!");
                 document.getElementById("first-name-news").value = "";

@@ -6,6 +6,7 @@
     max-width: 100%;
     min-height: 100vh;
     margin: var(--content-margin-v) 1.5em;
+    outline: 2px solid red;
 }
 
 .main-about-ogs-text {
@@ -164,4 +165,11 @@ p {
     .emp6{
         width: 300px;
     }
+}
+
+.main-about-story-wrapper{
+    display: block;
+    margin: var(--content-margin-v) 1.5em;
+    border: 3px solid red;
+    height: 100vh;
 }

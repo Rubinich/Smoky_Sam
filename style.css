@@ -439,7 +439,7 @@ main{
     justify-content: space-evenly;
     min-height: 30em;
     max-width: 100%;
-    margin: var(--content-margin-v);
+    margin: 5em 1.5em;
 }
 .main-prepare-text-layout{
     display: block;
@@ -556,11 +556,10 @@ main{
 .main-limited-gallery-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: flex-start;
     position: relative;
-    min-height: 15em;
-    margin: var(--content-margin-v) 1.5em;
+    max-width: 100%;
 }
 
 .main-limited-gallery-text-layout {
@@ -595,7 +594,6 @@ main{
     display: block;
     position: relative;
     width: 50%;
-    margin: 0 auto;
 }
 .limited-card{
     display: block;
@@ -611,7 +609,6 @@ main{
     max-height: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    object-position: center;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 .limited-card.active{
@@ -667,25 +664,26 @@ main{
         width: 95%;
         margin: 0 auto;
     }
+    .main-limited-gallery-wrapper{
+        flex-direction: column;
+        margin: 5em 1.5em;
+    }
 }
 @media (min-width: 425px) and (max-width: 767px){
     #carousel{
         width: 60%;
         margin: 0 auto;
     }
-}
-
-@media (min-width: 768px) and (max-width: 1024px){
-    #carousel{
-        width: 50%;
-        margin: 0 auto;
+    .main-limited-gallery-wrapper{
+        flex-direction: column;
+        margin: 5em 1.5em;
     }
 }
 
 @media (min-width: 1025px){
     .main-limited-gallery-wrapper{
         flex-direction: row;
-        margin: var(--content-margin-v) var(--content-margin-h);
+        margin: 5em var(--content-margin-v);
     }
     .limited-card figcaption{
         text-align: left;
