@@ -5,7 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Smokey Sam Restaurant</title>
+    <title>Restaurant Smoky Sam</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: 'foGlQT41WLTS2EUjv',
+                blockHeadless: true,
+            });
+        })();
+    </script>
 </head>
 
 <body>
@@ -51,11 +60,42 @@
 
             <section class="main-about-story">
                 <div class="main-about-story-wrapper">
-
+                    <div class="main-story-section1">
+                        <h2>The Inspiration</h2>
+                        <p>Tomislav Lisica, a native of Samobor, Croatia, has always had a passion for bold flavors and
+                            good company. During his travels abroad, he fell in love with the smoky magic of barbecue.
+                            The slow-cooked meats, infused with rich spices, and the vibrant atmosphere of BBQ
+                            gatherings left a lasting impression.</p>
+                    </div>
+                    <div class="main-story-section2">
+                        <h2>A Dream Takes Root</h2>
+                        <p>Back in Samobor, Tomislav couldn't shake the idea of bringing authentic BBQ to his hometown.
+                            He envisioned a place where friends and families could gather, share stories, and savor
+                            delicious smoked meats. The idea for Smoky Sam's was born – a restaurant dedicated to
+                            slow-cooked perfection, inspired by Tomislav's travels and love for good food.</p>
+                    </div>
+                    <div class="main-story-section3">
+                        <h2>Building the Team</h2>
+                        <p>Tomislav knew he couldn't embark on this journey alone. He assembled a passionate team who
+                            shared his vision for exceptional BBQ. Together, they honed their skills, experimenting with
+                            smoke, spices, and cooking techniques to create a unique Smoky Sam's flavor profile.</p>
+                    </div>
+                    <div class="main-story-section4">
+                        <h2>Finding Our Home</h2>
+                        <p>The search for the perfect location began. In 2010, Tomislav and his team found a spot in
+                            Samobor that resonated with their vision. This would be the home of Smoky Sam's, a place
+                            where the aroma of smoked meats would fill the air and laughter would echo through the
+                            halls.</p>
+                    </div>
+                    <div class="main-story-section5">
+                        <h2>Smoky Sam's Takes Flight</h2>
+                        <p>After two years of dedicated preparation, the much-anticipated day arrived. In 2012, Smoky
+                            Sam's opened its doors to Samobor and beyond. The restaurant quickly gained a loyal
+                            following, becoming a haven for those seeking delicious BBQ, warm hospitality, and a taste
+                            of Tomislav's culinary adventure.</p>
+                    </div>
                 </div>
             </section>
-
-
 
 
             <section class="main-about-ogs">
@@ -121,6 +161,23 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+            <section class="main-news">
+                <div class="main-news-wrapper">
+                    <div class="main-news-text">
+                        <h2>Never Miss Out<br><span>Stay in the smoke</span></h2>
+                        <p>Want to be the first to know about our latest smoked creations? Sign
+                            up for our email updates and we'll send them straight to your inbox.</p>
+                    </div>
+                    <form class="main-news-form">
+                        <input type="text" id="first-name-news" class="main-news-input" placeholder="First name"
+                            required>
+                        <input type="text" id="last-name-news" class="main-news-input" placeholder="Last name" required>
+                        <input type="email" id="email-news" class="main-news-input" placeholder="Email address"
+                            required>
+                        <button type="button" id="submit-news">Subscribe</button>
+                    </form>
                 </div>
             </section>
         </div>

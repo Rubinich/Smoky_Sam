@@ -5,7 +5,7 @@
     display: block;
     max-width: 100%;
     min-height: 100vh;
-    margin: var(--content-margin-v) 1.5em;
+    margin: 5em var(--content-margin-v);
     outline: 2px solid red;
 }
 
@@ -169,7 +169,19 @@ p {
 
 .main-about-story-wrapper{
     display: block;
-    margin: var(--content-margin-v) 1.5em;
-    border: 3px solid red;
-    height: 100vh;
+    margin: 5em var(--content-margin-v);
+    border: 2px solid red;
+    height: 200vh;
+}
+.main-about-story-wrapper>div{
+    display: block;
+    outline: 2px solid blue;
+    width: 50%;
+}
+.main-story-section1, .main-story-section3, .main-story-section5{
+    margin-inline: 0 auto;
+}
+.main-story-section2, .main-story-section4{
+    margin-inline: auto 0;
+    margin-block: 5em;
 }

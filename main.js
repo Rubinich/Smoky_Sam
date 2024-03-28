@@ -23,6 +23,7 @@ if (submitContact) {
 const arrow_down = document.getElementById("arrow_down");
 const mainPrepareSection = document.querySelector(".main-prepare");
 const mainContactSection = document.querySelector(".main-info");
+const mainStorySection = document.querySelector(".main-about-story")
 if (arrow_down) {
     arrow_down.addEventListener("click", () => {
         if (mainPrepareSection) {
@@ -30,9 +31,9 @@ if (arrow_down) {
         } else if (mainContactSection) {
             mainContactSection.scrollIntoView({ behavior: "smooth" });
         }
-        /*else if (window.location.href.includes("about")){
-            mainAboutSection.scrollIntoView({ behavior: "smooth"});
-        }*/
+        else if (mainStorySection){
+            mainStorySection.scrollIntoView({ behavior: "smooth"});
+        }
     });
 }
 
