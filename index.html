@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.png">
     <title>Restaurant Smoky Sam</title>
     <!--https://www.emailjs.com/docs/sdk/installation/-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -32,8 +33,7 @@
     </div>
     <header>
         <div class="container-header">
-            <!--<img src="" alt="">-->
-            <h1>Smoky Sam</h1>
+            <img id="restaurant_logo" src="./assets/icons/restaurant_logo.png" alt="">
             <nav class="desktop-layout-menu">
                 <ul>
                     <li><a href="">HOME</a></li>
@@ -135,8 +135,8 @@
                     <div id="carousel">
                         <button class="carousel-button before" id="before-button"><img
                                 src="./assets/icons/nav_before.svg" alt=""></button>
-                        <button class="carousel-button after" id="after-button"><img
-                                src="./assets/icons/nav_after.svg" alt=""></button>
+                        <button class="carousel-button after" id="after-button"><img src="./assets/icons/nav_after.svg"
+                                alt=""></button>
                         <ul id="images">
                             <div class="limited-card active">
                                 <img src="./assets/images/slide_dish/15.webp" alt="">
@@ -180,13 +180,15 @@
     <footer>
         <div class="container-footer">
             <div class="footer-left">
-                <div class="footer-header">
-                    <h2>Smoky Sam</h2>
+                <div class="logo-image">
+                    <img src="./assets/icons/restaurant_logo.png" alt="">
+                    <div class="footer-para">
+                        <p>Where smoke meets flavor
+                        </p>
+                    </div>
                 </div>
-                <div class="footer-para">
-                    <p>Where smoke meets flavor
-                    </p>
-                </div>
+
+
             </div>
             <div class="footer-right">
                 <nav>
@@ -195,6 +197,7 @@
                         <li><a href="about_us.html">ABOUT US</a></li>
                         <li><a href="menu.html">MENU</a></li>
                         <li><a href="contact_us.html">CONTACT US</a></li>
+                        <li><a href="privacy.html">PRIVACY</a></li>
                     </ul>
                 </nav>
             </div>
@@ -204,7 +207,7 @@
                 <p>&#169; Copyright Smoky Sam 2024.</p>
             </div>
             <div id="privacy">
-                <a href="privacy.html">Privacy Policy</a>
+                <p>Website by Alojz Rubinić</p>
             </div>
         </div>
     </footer>

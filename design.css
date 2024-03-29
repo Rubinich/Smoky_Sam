@@ -171,7 +171,7 @@ p {
     display: block;
     margin: 5em var(--content-margin-v);
     border: 2px solid red;
-    height: 200vh;
+    min-height: 100vh;
 }
 .main-about-story-wrapper>div{
     display: block;
