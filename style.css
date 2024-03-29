@@ -1013,7 +1013,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     padding-inline: 1em;
-    padding-block: 0.75em 0.25em;
+    padding-block: 1em 0.25em;
     width: 100%;
 }
 
@@ -1022,7 +1022,6 @@ footer {
     align-items: center;
     justify-content: center;
     width: 50%;
-    margin-inline: 2em;
 }
 .footer-right{
     width: 50%;
@@ -1119,6 +1118,7 @@ footer {
     }
     .footer-left{
         width: 100%;
+        margin-inline: 1.5em;
     }
 }
 
@@ -1128,6 +1128,9 @@ footer {
     }
     .logo-image{
         width: 280px;
+    }
+    .footer-right, .footer-left{
+        width: 50%;
     }
 }
 
