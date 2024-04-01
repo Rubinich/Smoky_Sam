@@ -6,7 +6,6 @@
     max-width: 100%;
     min-height: 100vh;
     margin: 5em var(--content-margin-v);
-    outline: 2px solid red;
 }
 
 .main-about-ogs-text {
@@ -34,7 +33,6 @@
 .main-about-ogs-text p{
     margin-block: 0.75em 0;
 }
-
 .main-about-ogs-card {
     display: grid;
     place-items: center;
@@ -54,7 +52,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 350px;
+    width: 325px;
     height: 100%;
     border-radius: var(--border-radius);
     background-image: url(./assets/images/background_dish/soft_textured_black_wall.webp);
@@ -100,8 +98,8 @@ p {
 }
 
 .emp-img {
-    width: 300px;
-    height: 300px;
+    width: 275px;
+    height: 275px;
     background-size: cover;
     border-radius: 50%;
     margin: 1.2em;
@@ -138,13 +136,17 @@ p {
 }
 
 @media (max-width: 1140px) {
+    .main-about-ogs-wrapper{
+        margin: 5em 1.5em;
+    }
     .main-about-ogs-card {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1em;
     }
 
     .emp-img {
         width: 250px;
+        height: 250px;
     }
 
     .emp-text h3 {
@@ -171,15 +173,19 @@ p {
     display: grid;
     grid-gap: 20em;
     margin: 5em var(--content-margin-v);
-    border: 2px solid red;
     max-width: 100%;
 }
 .main-about-story-wrapper>div{
     display: block;
     position: relative;
     width: 50%;
-    padding: 3em 3.5em;
+    padding: 2.5em 3em;
     border: 3px solid var(--clr-white);
+}
+[class*="main-story-section"]>h2{
+    font-family: "oswald-semibold", system-ui;
+    font-weight: 600;
+    font-size: var(--font-size-h2);
 }
 .main-story-section1, .main-story-section3, .main-story-section5{
     margin-inline: 0 auto;
@@ -200,16 +206,35 @@ p {
     box-sizing: unset;
     object-fit: cover;
     object-position: center;
-    border: 20px solid var(--clr-white);
+    border: 15px solid var(--clr-white);
 }
 #story_img1, #story_img2, #story_img4, #story_img5, #story_img7{
-    bottom: -14em;
+    bottom: -14.2em;
     right: 1em;
     rotate: -5deg;
 }
 #story_img3, #story_img6{
-    top: -14em;
+    top: -14.2em;
     left: 1em;
     rotate: 5deg;
 }
 
+@media (max-width: 768px){
+    .main-about-story-wrapper{
+        margin: 5em 1.5em;
+        grid-gap: 25em;
+    }
+    .main-about-story-wrapper>div{
+        width: 100%;
+        border-radius: var(--border-radius);
+        padding: 1.5em;
+        text-align: center;
+    }
+    #story_img1, #story_img2, #story_img3, #story_img4, #story_img5, #story_img6, #story_img7{
+        width: 225px;
+        height: 225px;
+    }
+    .main-story-section3, .main-story-section5{
+        margin-block-start: 15em;
+    }
+}
