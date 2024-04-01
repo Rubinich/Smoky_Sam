@@ -140,7 +140,7 @@ header {
     max-height: 65%;
     max-width: 100%;
     margin-inline: 1em;
-    margin-block-start: 0.65em;
+    margin-block-start: 0.55em;
 }
 
 .desktop-layout-menu {
@@ -782,7 +782,7 @@ main {
     font-size: var(--fluid-14-16);
 }
 
-@media (max-width: 424px) {
+@media (max-width: 500px) {
     #carousel {
         width: 95%;
         margin: 0 auto;
@@ -794,9 +794,9 @@ main {
     }
 }
 
-@media (min-width: 425px) and (max-width: 1024px) {
+@media (min-width: 501px) and (max-width: 1024px) {
     #carousel {
-        width: 60%;
+        width: 50%;
         margin: 0 auto;
     }
 
@@ -1047,7 +1047,7 @@ footer {
     font-size: 400;
     font-size: var(--font-size-footer);
     color: var(--clr-black);
-    padding: 0.5em 0.2em;
+    padding: 0.25em;
     width: 100%;
     text-align: center;
 }
