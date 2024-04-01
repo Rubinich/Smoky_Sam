@@ -180,8 +180,10 @@ p {
     position: relative;
     width: 50%;
     padding: 2.5em 3em;
-    border: 3px solid var(--clr-white);
+    background-color: #FFF455;
+    outline: 3px solid black;
 }
+
 [class*="main-story-section"]>h2{
     font-family: "oswald-semibold", system-ui;
     font-weight: 600;
@@ -206,7 +208,8 @@ p {
     box-sizing: unset;
     object-fit: cover;
     object-position: center;
-    border: 15px solid var(--clr-white);
+    border: 20px solid #FFF455;
+    outline: 3px solid black;
 }
 #story_img1, #story_img2, #story_img4, #story_img5, #story_img7{
     bottom: -14.2em;
