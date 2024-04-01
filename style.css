@@ -1144,10 +1144,10 @@ footer {
 
 .container-main-privacy h1 {
     text-align: center;
-    margin-block-end: 1.5em;
+    margin-block-end: 1em;
     font-family: "oswald-semibold", system-ui;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.3rem;
 }
 
 .container-main-privacy h2,
