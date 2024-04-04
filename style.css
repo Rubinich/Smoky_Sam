@@ -116,6 +116,9 @@ body {
     background-color: var(--clr-yellow);
 }
 
+body.no-scrolling {
+    overflow: hidden;
+}
 /************************************HEADER************************************/
 header {
     display: block;
@@ -347,9 +350,7 @@ button {
         display: block;
     }
 
-    body.no-scrolling {
-        overflow: hidden;
-    }
+    
 
     .container-header #restaurant_logo {
         margin-block-start: 0.2em;
@@ -934,7 +935,7 @@ main {
     max-width: 12em;
     background-color: var(--clr-yellow);
     color: var(--clr-black);
-    border: 3px solid var(--clr-yellow);
+    border: 3px solid black;
     cursor: pointer;
     text-align: center;
     transition: 0.2s all ease-in-out;

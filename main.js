@@ -37,12 +37,6 @@ if (arrow_down) {
     });
 }
 
-window.addEventListener("resize", dynamicHeightUpdate);
-window.addEventListener("resize", setHeight);
-document.addEventListener("DOMContentLoaded", function () {
-    dynamicHeightUpdate();
-    setHeight();
-});
 
 let isOpenMenuComplete;
 let isCloseMenuComplete;
@@ -138,6 +132,7 @@ function sendMail(event) {
 function showAlert(message) {
     const alert = document.getElementById("custom-alert");
     const messageElement = document.getElementById("alert-message");
+    document.body.classList.add("no-scrolling");
     messageElement.textContent = message;
     alert.style.display = "block";
 }
@@ -145,6 +140,7 @@ function showAlert(message) {
 function closeAlert() {
     const alert = document.getElementById("custom-alert");
     alert.style.display = "none";
+    document.body.classList.remove("no-scrolling");
 }
 
 const buttons = document.querySelectorAll("#before-button, #after-button");
@@ -164,6 +160,13 @@ buttons.forEach(button => {
         activeSlide.classList.remove("active");
     })
 });
+
+
+
+window.onload = function() {
+    dynamicHeightUpdate();
+    setHeight();
+};
 
 
 function dynamicHeightUpdate() {
