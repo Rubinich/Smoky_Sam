@@ -210,7 +210,7 @@ button {
 .mobile-layout-menu .close-button {
     display: none;
     position: absolute;
-    top: calc(var(--header-height-phone-tablet)/2 - 22.5px);
+    top: calc(var(--header-height-phone-tablet)/2 - 21.5px);
     right: 0;
     margin-inline: 1.2em;
     z-index: 10;
@@ -219,8 +219,8 @@ button {
 
 .open-button img,
 .close-button img {
-    width: 45px;
-    height: 45px;
+    width: 43px;
+    height: 43px;
 }
 
 @keyframes rotateAndHide {
@@ -350,11 +350,9 @@ button {
         display: block;
     }
 
-    
-
     .container-header #restaurant_logo {
         margin-block-start: 0.2em;
-        max-width: calc(100% - (3em + 45px));
+        max-width: calc(100% - (3em + 43px));
     }
 }
 
@@ -365,7 +363,7 @@ button {
 
     .container-header #restaurant_logo {
         margin-block-start: 0.2em;
-        max-width: calc(100% - (3em + 45px));
+        max-width: calc(100% - (3em + 43px));
     }
 }
 
@@ -470,30 +468,6 @@ main {
     font-size: var(--fluid-16-30);
 }
 
-/*
-.text-container a {
-    display: block;
-    font-family: "oswald-semibold", system-ui;
-    font-weight: 600;
-    font-size: var(--fluid-16-20);
-    max-width: 15em;
-    padding: 0.5em 2em;
-    margin-top: 1.2em;
-    margin-inline: auto;
-    text-align: center;
-    color: var(--clr-yellow);
-    background-color: transparent;
-    border: 3px solid var(--clr-yellow);
-    transition: 0.2s all ease-in-out;
-}
-.text-container a:hover{
-    border-color: black;
-    background-color: black;
-    color: var(--clr-yellow);
-}
-.text-container a:active{
-    cursor: default;
-}*/
 @media (max-width: 768px) {
 
     .text-container-layout,
