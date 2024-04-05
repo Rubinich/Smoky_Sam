@@ -1,4 +1,3 @@
-/*const mainAboutSection = document.querySelector(".");*/
 
 const openBtn = document.getElementById("openButton");
 if (openBtn) {
@@ -27,12 +26,11 @@ const mainStorySection = document.querySelector(".main-about-story")
 if (arrow_down) {
     arrow_down.addEventListener("click", () => {
         if (mainPrepareSection) {
-            mainPrepareSection.scrollIntoView({ behavior: "smooth" });
+            mainPrepareSection.scrollIntoView();
         } else if (mainContactSection) {
-            mainContactSection.scrollIntoView({ behavior: "smooth" });
-        }
-        else if (mainStorySection){
-            mainStorySection.scrollIntoView({ behavior: "smooth"});
+            mainContactSection.scrollIntoView();
+        } else if (mainStorySection) {
+            mainStorySection.scrollIntoView();
         }
     });
 }
@@ -105,7 +103,7 @@ function sendMail(event) {
             .catch(function (error) {
                 showAlert("An error occurred while subscribing. Please try again later.");
             });
-        event.stopPropagation();
+        event.preventDefault();
     } else {
         const firstName = document.getElementById("first-name-news").value;
         const lastName = document.getElementById("last-name-news").value;
@@ -125,7 +123,7 @@ function sendMail(event) {
             .catch(function (error) {
                 showAlert("An error occurred while subscribing. Please try again later.");
             });
-        event.stopPropagation();
+        event.preventDefault();
     }
 }
 
@@ -163,12 +161,12 @@ buttons.forEach(button => {
 
 
 
-window.onload = function() {
-    dynamicHeightUpdate();
+window.onload = function () {
+    /*dynamicHeightUpdate();*/
     setHeight();
 };
 
-
+/*
 function dynamicHeightUpdate() {
     const activeCard = document.querySelector(".limited-card.active");
     const layout = document.getElementById("carousel");
@@ -176,7 +174,8 @@ function dynamicHeightUpdate() {
         const activeCardHeight = activeCard.clientHeight;
         layout.style.height = `${activeCardHeight}px`;
     }
-}
+    
+}*/
 
 
 function setHeight() {
@@ -199,4 +198,11 @@ function setHeight() {
 }
 
 
+const newsBtn = document.getElementById("newsletter_button");
+if (newsBtn) {
+    newsBtn.addEventListener("click", function () {
+        event.preventDefault();
+        window.location.href = "index.html#newsSection";
+    });
+}
 
