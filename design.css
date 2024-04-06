@@ -212,12 +212,12 @@ p {
     outline: 3px solid black;
 }
 #story_img1, #story_img2, #story_img4, #story_img5, #story_img7{
-    bottom: -14.2em;
+    bottom: -15em;
     right: 1em;
     rotate: -5deg;
 }
 #story_img3, #story_img6{
-    top: -14.2em;
+    top: -15em;
     left: 1em;
     rotate: 5deg;
 }
