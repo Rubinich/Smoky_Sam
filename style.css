@@ -7,8 +7,6 @@
 @import url(design.css);
 
 :root {
-    --breakpoint-mobile-m: 375px;
-
     --header-height-phone-tablet: 90px;
     --header-height-tablet-laptop: 100px;
     --header-height-default: 120px;
@@ -38,7 +36,7 @@
     --clr-yellow: #FFD700;
     --clr-black: #000000;
     --clr-grey: #61677A;
-    --clr-light-grey: #A9A9A9
+    --clr-light-grey: #A9A9A9;
 }
 
 @font-face {
