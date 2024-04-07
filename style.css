@@ -393,14 +393,14 @@ main {
 
 /************************************MAIN-GALLERY-INDEX************************************/
 .main-gallery-wrapper,
-.main-contact-section-wrapper {
+.main-hero-section-wrapper {
     display: block;
     width: 100%;
     position: relative;
 }
 
 .main-gallery-wrapper #bg_image,
-.main-contact-section-wrapper #bg_image {
+.main-hero-section-wrapper #bg_image {
     width: 100%;
     height: calc(100vh - var(--header-height-default));
     object-fit: cover;
@@ -408,7 +408,7 @@ main {
 }
 
 .main-gallery-wrapper #arrow_down,
-.main-contact-section-wrapper #arrow_down {
+.main-hero-section-wrapper #arrow_down {
     display: block;
     height: 60x;
     width: 60px;
@@ -423,23 +423,23 @@ main {
 }
 
 .main-gallery-wrapper #arrow_down:active,
-.main-contact-section-wrapper #arrow_down:active {
+.main-hero-section-wrapper #arrow_down:active {
     cursor: default;
 }
 
 .main-gallery-wrapper #arrow_down:hover,
-.main-contact-section-wrapper #arrow_down:hover {
+.main-hero-section-wrapper #arrow_down:hover {
     opacity: 1;
 }
 
 .text-container-layout,
-.text-container-contact-layout {
+.text-container-hero-layout {
     display: block;
     width: 75%;
 }
 
 .text-container,
-.text-container-contact {
+.text-container-hero {
     display: flex;
     position: absolute;
     top: 50%;
@@ -456,7 +456,7 @@ main {
 }
 
 .text-container h2,
-.text-container-contact h2 {
+.text-container-hero h2 {
     font-family: "oswald-semibold", system-ui;
     font-weight: 600;
     font-size: var(--fluid-41-70);
@@ -464,7 +464,7 @@ main {
 }
 
 .text-container h3,
-.text-container-contact h3 {
+.text-container-hero h3 {
     font-family: "oswald-regular", system-ui;
     font-weight: 400;
     font-size: var(--fluid-16-30);
@@ -473,17 +473,17 @@ main {
 @media (max-width: 768px) {
 
     .text-container-layout,
-    .text-container-contact-layout {
+    .text-container-hero-layout {
         width: 90%;
     }
 
     .main-gallery-wrapper#bg_image,
-    .main-contact-section-wrapper #bg_image {
+    .main-hero-section-wrapper #bg_image {
         height: calc(100vh - var(--header-height-phone-tablet));
     }
 
     .main-gallery-wrapper #arrow_down,
-    .main-contact-section-wrapper #arrow_down {
+    .main-hero-section-wrapper #arrow_down {
         width: 50px;
         height: 50px;
     }
@@ -492,12 +492,12 @@ main {
 @media (min-width: 769px) and (max-width: 1023px) {
 
     .main-gallery-wrapper #bg_image,
-    .main-contact-section-wrapper #bg_image {
+    .main-hero-section-wrapper #bg_image {
         height: calc(100vh - var(--header-height-tablet-laptop));
     }
 
     .main-gallery-wrapper #arrow_down,
-    .main-contact-section-wrapper #arrow_down {
+    .main-hero-section-wrapper #arrow_down {
         width: 50px;
         height: 50px;
     }
