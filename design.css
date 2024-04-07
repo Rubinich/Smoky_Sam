@@ -4,12 +4,14 @@
     display: block;
     max-width: 100%;
     margin: var(--content-margin-h) var(--content-margin-v);
+    outline: 3px solid red;
 }
 .main-menu-nav ul{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    outline: 3px solid green;
 }
 .main-menu-nav .menuBtn{
     display: block;
@@ -38,7 +40,7 @@
 .main-menu-section{
     display: none;
     max-width: 100%;
-    margin: 1em;
+    outline: 3px solid blue;
 }
 .menu-col1, .menu-col2{
     display: flex;
@@ -47,6 +49,7 @@
     width: 50%;
     padding: 1em;
     text-align: center;
+    border: 3px solid purple;
 }
 
 .col-header{
@@ -83,8 +86,12 @@
 .menu-col1 li, .menu-col2 li{
     width: 80%;
     margin: 1.5em 0;
+    outline: 3px solid orangered;
 }
-@media (max-width: 768px){
+@media (min-width: 320px) and (max-width: 425px){
+    .menu-col1 li, .menu-col2 li{
+        width: 90%;
+    }
     .main-menu-wrapper{
         margin: var(--content-margin-h) 1.5em;
     }
@@ -93,6 +100,20 @@
     }
     .menu-col1, .menu-col2{
         width: 100%;
+    }
+}
+@media (min-width:425px) and (max-width: 768px){
+    .main-menu-wrapper{
+        margin: var(--content-margin-h) 1.5em;
+    }
+    .main-menu-section{
+        flex-direction: column;
+    }
+    .menu-col1, .menu-col2{
+        width: 100%;
+    }
+    .menu-col1 li, .menu-col2 li{
+        width: 70%;
     }
 }
 @media (min-width: 768px) and (max-width: 1000px){
