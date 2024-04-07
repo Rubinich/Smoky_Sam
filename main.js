@@ -22,7 +22,8 @@ if (submitContact) {
 const arrow_down = document.getElementById("arrow_down");
 const mainPrepareSection = document.querySelector(".main-prepare");
 const mainContactSection = document.querySelector(".main-info");
-const mainStorySection = document.querySelector(".main-about-story")
+const mainStorySection = document.querySelector(".main-about-story");
+const mainMenuSection = document.querySelector(".main-menu");
 if (arrow_down) {
     arrow_down.addEventListener("click", () => {
         if (mainPrepareSection) {
@@ -31,6 +32,8 @@ if (arrow_down) {
             mainContactSection.scrollIntoView();
         } else if (mainStorySection) {
             mainStorySection.scrollIntoView();
+        } else {
+            mainMenuSection.scrollIntoView();
         }
     });
 }
@@ -192,8 +195,10 @@ if (newsBtn) {
 
 const menuBtns = document.querySelectorAll(".menuBtn");
 const menuSections = document.querySelectorAll(".main-menu-section");
+
 menuBtns.forEach(button => {
     button.addEventListener("click", function (event) {
+        event.preventDefault();
         menuSections.forEach(section => section.style.display = "none");
         menuBtns.forEach(btn => btn.classList.remove("active"));
         event.currentTarget.classList.add("active");
@@ -201,5 +206,6 @@ menuBtns.forEach(button => {
         document.getElementById(btnId).style.display = "flex";
     });
 });
+
 
 

@@ -4,21 +4,12 @@
     display: block;
     max-width: 100%;
     margin: var(--content-margin-h) var(--content-margin-v);
-    outline: 3px solid red;
-    min-height: 100vh;
 }
 .main-menu-nav ul{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    outline: 3px solid blue;
-}
-.main-menu-nav h2{
-    display: block;
-    max-width: 100%;
-    text-align: center;
-    padding: 0.75em 1em;
 }
 .main-menu-nav .menuBtn{
     display: block;
@@ -47,7 +38,6 @@
 .main-menu-section{
     display: none;
     max-width: 100%;
-    outline: 3px solid green;
     margin: 1em;
 }
 .menu-col1, .menu-col2{
@@ -55,14 +45,13 @@
     flex-direction: column;
     align-items: center;
     width: 50%;
-    outline: 5px solid purple;
     padding: 1em;
     text-align: center;
 }
 
 .col-header{
     width: 80%;
-    outline: 3px solid red;
+    margin-block: 1em;
 }
 .col-header h2{
     font-family: "Helvetica", system-ui;
