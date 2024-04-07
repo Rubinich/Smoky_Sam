@@ -159,24 +159,9 @@ buttons.forEach(button => {
     })
 });
 
-
-
 window.onload = function () {
-    /*dynamicHeightUpdate();*/
     setHeight();
 };
-
-/*
-function dynamicHeightUpdate() {
-    const activeCard = document.querySelector(".limited-card.active");
-    const layout = document.getElementById("carousel");
-    if (activeCard) {
-        const activeCardHeight = activeCard.clientHeight;
-        layout.style.height = `${activeCardHeight}px`;
-    }
-    
-}*/
-
 
 function setHeight() {
     const imageIndex = document.getElementById("bg_image");
@@ -197,7 +182,6 @@ function setHeight() {
     }
 }
 
-
 const newsBtn = document.getElementById("newsletter_button");
 if (newsBtn) {
     newsBtn.addEventListener("click", function () {
@@ -205,4 +189,17 @@ if (newsBtn) {
         window.location.href = "index.html#newsSection";
     });
 }
+
+const menuBtns = document.querySelectorAll(".menuBtn");
+const menuSections = document.querySelectorAll(".main-menu-section");
+menuBtns.forEach(button => {
+    button.addEventListener("click", function (event) {
+        menuSections.forEach(section => section.style.display = "none");
+        menuBtns.forEach(btn => btn.classList.remove("active"));
+        event.currentTarget.classList.add("active");
+        const btnId = event.currentTarget.getAttribute("href").substring(1);
+        document.getElementById(btnId).style.display = "flex";
+    });
+});
+
 
