@@ -180,7 +180,7 @@ p {
     position: relative;
     width: 50%;
     padding: 2.5em 3em;
-    background-color: #F9E897;
+    background-color: #f8ed62;
     outline: 3px solid black;
 }
 
@@ -208,7 +208,7 @@ p {
     box-sizing: unset;
     object-fit: cover;
     object-position: center;
-    border: 20px solid #F9E897;
+    border: 20px solid #f8ed62;
     outline: 3px solid black;
 }
 #story_img1, #story_img2, #story_img4, #story_img5, #story_img7{
