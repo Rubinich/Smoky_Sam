@@ -707,8 +707,8 @@ main {
 
 .carousel-button {
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 47px;
+    height: 47px;
     position: absolute;
     top: 0;
     background: none;
@@ -719,6 +719,7 @@ main {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     opacity: 0.7;
+    outline: 3px solid red;
 }
 
 .carousel-button:hover {
@@ -732,14 +733,21 @@ main {
 .carousel-button img {
     width: 100%;
     height: 100%;
+    outline: 2px solid green;
 }
 
 .carousel-button.before {
     left: 1.5em;
 }
+.carousel-button.before img{
+    padding: 0 2px 0 0;
+}
 
 .carousel-button.after {
     right: 1.5em;
+}
+.carousel-button.after img{
+    padding: 0 0 0 2px;
 }
 
 .limited-card .limited_info {
