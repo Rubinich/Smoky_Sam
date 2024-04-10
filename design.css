@@ -4,14 +4,13 @@
     display: block;
     max-width: 100%;
     margin: var(--content-margin-h) var(--content-margin-v);
-    outline: 3px solid red;
 }
 .main-menu-nav ul{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    outline: 3px solid green;
+    margin-bottom: 2em;
 }
 .main-menu-nav .menuBtn{
     display: block;
@@ -40,7 +39,6 @@
 .main-menu-section{
     display: none;
     max-width: 100%;
-    outline: 3px solid blue;
 }
 .menu-col1, .menu-col2{
     display: flex;
@@ -49,7 +47,6 @@
     width: 50%;
     padding: 1em;
     text-align: center;
-    border: 3px solid purple;
 }
 
 .col-header{
@@ -86,7 +83,6 @@
 .menu-col1 li, .menu-col2 li{
     width: 80%;
     margin: 1.5em 0;
-    outline: 3px solid orangered;
 }
 @media (min-width: 320px) and (max-width: 425px){
     .menu-col1 li, .menu-col2 li{
