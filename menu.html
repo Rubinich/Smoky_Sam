@@ -49,35 +49,68 @@
             </section>
             <section class="main-menu">
                 <div class="main-menu-wrapper">
-                    <div class="main-menu-nav">
+                    <div class="main-menu-nav" id="menuNav">
                         <ul>
-                            <li><a href="#menuBasic" class="menuBtn active">Menu</a></li>
-                            <li><a href="#menuLimited" class="menuBtn">Limited</a></li>
+                            <li><a href="#menuBasic" class="menuBtn active" id="menuBasicBtn">Basic</a></li>
+                            <li><a href="#menuLimited" class="menuBtn" id="menuLimitedBtn">Limited</a></li>
                             <li><a href="#menuDrinks" class="menuBtn">Drinks</a></li>
                         </ul>
                     </div>
-                    <div class="main-menu-section active" id="menuBasic" style="display: flex;">
+                    <div class="main-menu-section" id="menuBasic" style="display: flex;">
                         <div class="menu-col1">
                             <div class="col-header">
-                                <h2><br><span></span></h2>
+                                <h2>Where Grill Masters<br><span>Work Their Magic</span></h2>
                             </div>
                             <ul>
-                                <li><img src="./assets/images/dish/hotdog.webp" alt=""><h3></h3><p></p></li>
-                                <li><img src="./assets/images/dish/hotdog_h.webp" alt=""><h3></h3><p></p></li>
-                                <li><img src="./assets/images/dish/ham.webp" alt=""><h3></h3><p></p></li>
-                                <li><img src="./assets/images/dish/close_meat.webp" alt=""><h3></h3><p></p></li>
-                                <li><img src="./assets/images/dish/mixed_meat_h.webp" alt=""><h3></h3><p></p></li>
+                                <li><img src="./assets/images/dish/hotdog.webp" alt="">
+                                    <h3>Hot Dog Extravaganza</h3>
+                                    <p>Hot dog bun, hot dog sausage, tomato, red onion, cucumber, ketchup, mustard,
+                                        guacamole</p>
+                                </li>
+                                <li><img src="./assets/images/dish/hotdog_h.webp" alt="">
+                                    <h3>Classic Hot Dog</h3>
+                                    <p>Hot dog bun, hot dog sausage, red onion, hot bbq sauce, Queso Fresco cheese</p>
+                                </li>
+                                <li><img src="./assets/images/dish/ham.webp" alt="">
+                                    <h3>The All-American Stack Attack</h3>
+                                    <p>Toasted hamburger bun, beef patty, cheddar cheese, tomato, onion, mustard,
+                                        cucumber, lettuce, french fries</p>
+                                </li>
+                                <li><img src="./assets/images/dish/close_meat.webp" alt="">
+                                    <h3>Grilled Cheesy Hungarian Sausages</h3>
+                                    <p>Sausages, paprika, cheddar cheese, oregano</p>
+                                </li>
+                                <li><img src="./assets/images/dish/mixed_meat_h.webp" alt="">
+                                    <h3>BBQ Chicken & Kebabs</h3>
+                                    <p>Kebab, chicken breast, chicken wings, lettuce, red onion, honey bbq sauce, lemon
+                                    </p>
+                                </li>
                             </ul>
                         </div>
                         <div class="menu-col2">
                             <div class="col-header">
-                                <h2><br><span></span></h2>
+                                <h2>Unleash Your Inner Foodie<br><span>with Sizzling Delights</span></h2>
                             </div>
                             <ul>
-                                <li><img src="./assets/images/dish/ribs_h.webp" alt=""><h3></h3><p></p></li>
-                                <li><img src="./assets/images/dish/ribs_v.webp" alt=""><h3></h3><p></p></li>
-                                <li><img src="./assets/images/dish/toma.webp" alt=""><h3></h3><p></p></li>
-                                <li><img src="./assets/images/dish/steak_v.webp" alt=""><h3></h3><p></p></li>
+                                <li><img src="./assets/images/dish/ribs_h.webp" alt="">
+                                    <h3>Grilled Beef Ribs</h3>
+                                    <p>Beef ribs, honey bbq sauce</p>
+                                </li>
+                                <li><img src="./assets/images/dish/pizza.webp" alt="">
+                                    <h3>Honey BBQ Meatsapalooza Pizza</h3>
+                                    <p>Pizza dough, tomato sauce, mozzarella cheese, sliced sausages, BBQ pulled pork,
+                                        red onions, red bell peppers, honey BBQ sauce</p>
+                                </li>
+                                <li><img src="./assets/images/dish/toma.webp" alt="">
+                                    <h3>The Tomahawk Steakhouse Classic</h3>
+                                    <p>Bone-in ribeye steak, extra grill seasoning, butter, tomato, potato, chilli
+                                        peppers</p>
+                                </li>
+                                <li><img src="./assets/images/dish/wings.webp" alt="">
+                                    <h3>Buffalo Chicken Wings</h3>
+                                    <p>Chicken wings, buffalo chicken wing sauce, butter, optional: blue cheese
+                                        dressing, celery sticks</p>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -123,7 +156,8 @@
                     <div class="main-menu-section" id="menuDrinks">
                         <div class="menu-col1">
                             <div class="col-header">
-                                <h2>Sweet & Fizzy<br><span>Quench your thirst with our selected carbonated drinks</span></h2>
+                                <h2>Sweet & Fizzy<br><span>Quench your thirst with our selected carbonated drinks</span>
+                                </h2>
                             </div>
                             <ul>
                                 <li><img src="./assets/images/drinks/1.webp" alt="">
@@ -148,7 +182,8 @@
                         </div>
                         <div class="menu-col2">
                             <div class="col-header">
-                                <h2>Croatian Classics & Beyond<br><span>Featuring Karlovačko beers and world-renowned spirits</span></h2>
+                                <h2>Croatian Classics & Beyond<br><span>Featuring Karlovačko beers and world-renowned
+                                        spirits</span></h2>
                             </div>
                             <ul>
                                 <li><img src="./assets/images/drinks/4.webp" alt="">
@@ -207,6 +242,17 @@
         </div>
     </footer>
     <script src="main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has("flag")) {
+                menuBasicSection.style.display = "none";
+                menuBasicBtn.classList.remove("active");
+                menuLimitedSection.style.display = "flex";
+                menuLimitedBtn.classList.add("active");
+            }
+        });
+    </script>
 </body>
 
 </html>

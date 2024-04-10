@@ -54,7 +54,7 @@
 
 .col-header{
     width: 80%;
-    margin-block: 1em;
+    margin-block: 0.75em;
 }
 .col-header h2{
     font-family: "Helvetica", system-ui;

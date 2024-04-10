@@ -181,31 +181,49 @@ function setHeight() {
             dynamicHeaderHeight = parseInt(computedStyles.getPropertyValue("--header-height-default"));
         }
         const height = window.innerHeight - topOffset - dynamicHeaderHeight;
-        imageIndex.style.height = `${height}px`;
+        imageIndex.style.height = "${height}px";
     }
 }
 
 const newsBtn = document.getElementById("newsletter_button");
 if (newsBtn) {
-    newsBtn.addEventListener("click", function () {
+    newsBtn.addEventListener("click", function (event) {
         event.preventDefault();
         window.location.href = "index.html#newsSection";
     });
 }
 
 const menuBtns = document.querySelectorAll(".menuBtn");
-const menuSections = document.querySelectorAll(".main-menu-section");
-
-menuBtns.forEach(button => {
-    button.addEventListener("click", function (event) {
-        event.preventDefault();
-        menuSections.forEach(section => section.style.display = "none");
-        menuBtns.forEach(btn => btn.classList.remove("active"));
-        event.currentTarget.classList.add("active");
-        const btnId = event.currentTarget.getAttribute("href").substring(1);
-        document.getElementById(btnId).style.display = "flex";
+if (menuBtns) {
+    menuBtns.forEach(button => {
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
+            menuSections.forEach(section => section.style.display = "none");
+            menuBtns.forEach(btn => btn.classList.remove("active"));
+            event.currentTarget.classList.add("active");
+            const btnId = event.currentTarget.getAttribute("href").substring(1);
+            document.getElementById(btnId).style.display = "flex";
+        });
     });
-});
+}
+
+
+
+const viewOffer = document.querySelectorAll(".view_offer");
+const menuSections = document.querySelectorAll(".main-menu-section");
+const menuLimitedSection = document.getElementById("menuLimited");
+const menuBasicSection = document.getElementById("menuBasic");
+const menuLimitedBtn = document.getElementById("menuLimitedBtn");
+const menuBasicBtn = document.getElementById("menuBasicBtn");
+
+if (viewOffer) {
+    viewOffer.forEach(button => {
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "menu.html?flag=true";
+        });
+    });
+}
 
 
 
