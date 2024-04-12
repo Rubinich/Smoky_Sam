@@ -189,10 +189,10 @@ function setHeight() {
         } else {
             dynamicHeaderHeight = parseInt(computedStyles.getPropertyValue("--header-height-default"));
         }
-        const height = window.innerHeight - topOffset - dynamicHeaderHeight;
-        imageIndex.style.height = "${height}px";
+        imageIndex.style.height = "${window.innerHeight - topOffset - dynamicHeaderHeight}px";
     }
 }
+
 
 const newsBtn = document.getElementById("newsletter_button");
 if (newsBtn) {
