@@ -189,7 +189,7 @@ function setHeight() {
         } else {
             dynamicHeaderHeight = parseInt(computedStyles.getPropertyValue("--header-height-default"));
         }
-        imageIndex.style.height = "${window.innerHeight - topOffset - dynamicHeaderHeight}px";
+        imageIndex.style.height = `${window.innerHeight - topOffset - dynamicHeaderHeight}px`;
     }
 }
 
