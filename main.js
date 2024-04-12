@@ -76,6 +76,7 @@ function closeMenu() {
                 isOpenMenuComplete = false;
                 isCloseMenuComplete = false;
             }
+            mobileMenuLayout.style.zIndex = -1;
         }, 500);
         closeBtn.classList.remove("reverse-rotate-and-show");
         openBtn.classList.remove("reverse-rotate-and-hide");
