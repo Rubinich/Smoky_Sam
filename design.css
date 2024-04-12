@@ -1,21 +1,14 @@
 @import url(style.css);
-
+/*
 .mobile-layout-header{
     display: block;
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: -1;
     transition: background-color 0.5s ease-in-out;
     border: 3px solid red;
-}
-.mobile-layout-header[aria-expanded="false"]{
-    background-color: transparent;
-}
-.mobile-layout-header[aria-expanded="true"]{
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 @keyframes transparentToBlack {
@@ -45,4 +38,4 @@
 .transparent-to-black, .black-to-transparent {
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
-}
+}*/
