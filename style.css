@@ -474,7 +474,7 @@ main {
         width: 90%;
     }
 
-    .main-gallery-wrapper#bg_image,
+    .main-gallery-wrapper #bg_image,
     .main-hero-section-wrapper #bg_image {
         height: calc(100vh - var(--header-height-phone-tablet));
     }
