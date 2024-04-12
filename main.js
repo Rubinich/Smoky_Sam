@@ -218,9 +218,7 @@ if (menuBtns) {
 }
 
 
-
 const viewOffer = document.querySelectorAll(".view_offer");
-
 const menuLimitedSection = document.getElementById("menuLimited");
 const menuBasicSection = document.getElementById("menuBasic");
 const menuLimitedBtn = document.getElementById("menuLimitedBtn");
