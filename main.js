@@ -46,9 +46,11 @@ const mobileMenuLayout = document.querySelector(".mobile-layout-header");
 
 function openMenu() {
     document.body.classList.add("no-scrolling");
-    mobileMenuLayout.style.zIndex = 4;
     openBtn.classList.add("rotate-and-hide");
+    //
+    mobileMenuLayout.style.zIndex = 4;
     mobileMenuLayout.classList.add("transparent-to-black");
+    //
     closeBtn.classList.add("rotate-and-show");
     setTimeout(() => {
         openBtn.style.display = "none";
@@ -63,8 +65,10 @@ function openMenu() {
 function closeMenu() {
     closeBtn.classList.add("reverse-rotate-and-show");
     openBtn.classList.add("reverse-rotate-and-hide");
+    //
     mobileMenuLayout.classList.remove("transparent-to-black");
     mobileMenuLayout.classList.add("black-to-transparent");
+    //
     setTimeout(() => {
         openBtn.style.display = "block";
         closeBtn.style.display = "none";
@@ -76,11 +80,13 @@ function closeMenu() {
                 isOpenMenuComplete = false;
                 isCloseMenuComplete = false;
             }
+            //
             mobileMenuLayout.style.zIndex = -1;
+            mobileMenuLayout.classList.remove("black-to-transparent");
+            //
         }, 500);
         closeBtn.classList.remove("reverse-rotate-and-show");
         openBtn.classList.remove("reverse-rotate-and-hide");
-        mobileMenuLayout.classList.remove("black-to-transparent");
         mobileMenu.setAttribute("aria-expanded", "false");
         document.body.classList.remove("no-scrolling");
     }, 500);
