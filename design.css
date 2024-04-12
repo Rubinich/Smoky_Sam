@@ -35,8 +35,12 @@
 .black-to-transparent{
     animation-name: blackToTransparent;
 }
-.transparent-to-black, .black-to-transparent {
+.transparent-to-black{
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
+}
+.black-to-transparent {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
 }
