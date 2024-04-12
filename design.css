@@ -7,9 +7,10 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    height: 100%;
     z-index: -1;
     transition: background-color 0.5s ease-in-out;
+    border: 3px solid red;
 }
 .mobile-layout-header[aria-expanded="false"]{
     background-color: transparent;

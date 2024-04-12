@@ -179,6 +179,7 @@ function setHeight() {
     const imageIndex = document.getElementById("bg_image");
     const containerHeader = document.querySelector(".container-header");
     if (imageIndex && containerHeader) {
+        const topOffset = window.innerHeight - window.document.documentElement.clientHeight;
         let dynamicHeaderHeight;
         const computedStyles = window.getComputedStyle(containerHeader);
         if (window.innerWidth <= 768) {
@@ -188,7 +189,7 @@ function setHeight() {
         } else {
             dynamicHeaderHeight = parseInt(computedStyles.getPropertyValue("--header-height-default"));
         }
-        const height = window.innerHeight  - dynamicHeaderHeight;
+        const height = window.innerHeight - topOffset - dynamicHeaderHeight;
         imageIndex.style.height = "${height}px";
     }
 }
