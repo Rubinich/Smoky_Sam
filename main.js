@@ -42,23 +42,28 @@ if (arrow_down) {
 let isOpenMenuComplete;
 let isCloseMenuComplete;
 const mobileMenu = document.querySelector(".mobile-layout-menu");
+const mobileMenuLayout = document.querySelector(".mobile-layout-header");
 function openMenu() {
     document.body.classList.add("no-scrolling");
     openBtn.classList.add("rotate-and-hide");
+    mobileMenuLayout.classList.add("transparent-to-black");
     closeBtn.classList.add("rotate-and-show");
     setTimeout(() => {
         openBtn.style.display = "none";
         closeBtn.style.display = "block";
         isOpenMenuComplete = true;
         openBtn.classList.remove("rotate-and-hide");
+        mobileMenuLayout.classList.remove("transparent-to-black");
         closeBtn.classList.remove("rotate-and-show");
     }, 500);
     mobileMenu.setAttribute("aria-expanded", "true");
+    mobileMenuLayout.setAttribute("aria-expanded", "true");
 }
 
 function closeMenu() {
     closeBtn.classList.add("reverse-rotate-and-show");
     openBtn.classList.add("reverse-rotate-and-hide");
+    mobileMenuLayout.classList.add("black-to-transparent");
     setTimeout(() => {
         openBtn.style.display = "block";
         closeBtn.style.display = "none";
@@ -72,8 +77,10 @@ function closeMenu() {
             }
         }, 500);
         openBtn.classList.remove("reverse-rotate-and-hide");
+        mobileMenuLayout.classList.remove("black-to-transparent");
         closeBtn.classList.remove("reverse-rotate-and-show");
         mobileMenu.setAttribute("aria-expanded", "false");
+        mobileMenuLayout.setAttribute("aria-expanded", "false");
         document.body.classList.remove("no-scrolling");
     }, 500);
 }
@@ -194,6 +201,7 @@ if (newsBtn) {
 }
 
 const menuBtns = document.querySelectorAll(".menuBtn");
+const menuSections = document.querySelectorAll(".main-menu-section");
 if (menuBtns) {
     menuBtns.forEach(button => {
         button.addEventListener("click", function (event) {
@@ -210,7 +218,7 @@ if (menuBtns) {
 
 
 const viewOffer = document.querySelectorAll(".view_offer");
-const menuSections = document.querySelectorAll(".main-menu-section");
+
 const menuLimitedSection = document.getElementById("menuLimited");
 const menuBasicSection = document.getElementById("menuBasic");
 const menuLimitedBtn = document.getElementById("menuLimitedBtn");
