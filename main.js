@@ -43,10 +43,12 @@ let isOpenMenuComplete;
 let isCloseMenuComplete;
 const mobileMenu = document.querySelector(".mobile-layout-menu");
 const mobileMenuLayout = document.querySelector(".mobile-layout-header");
+
 function openMenu() {
     document.body.classList.add("no-scrolling");
+    mobileMenuLayout.style.zIndex = 4;
     openBtn.classList.add("rotate-and-hide");
-    /*mobileMenuLayout.classList.add("transparent-to-black");*/
+    mobileMenuLayout.classList.add("transparent-to-black");
     closeBtn.classList.add("rotate-and-show");
     setTimeout(() => {
         openBtn.style.display = "none";
