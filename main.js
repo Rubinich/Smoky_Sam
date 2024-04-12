@@ -77,8 +77,8 @@ function closeMenu() {
             }
         }, 500);
         openBtn.classList.remove("reverse-rotate-and-hide");
-        mobileMenuLayout.classList.remove("black-to-transparent");
         closeBtn.classList.remove("reverse-rotate-and-show");
+        mobileMenuLayout.classList.remove("black-to-transparent");
         mobileMenu.setAttribute("aria-expanded", "false");
         mobileMenuLayout.setAttribute("aria-expanded", "false");
         document.body.classList.remove("no-scrolling");
