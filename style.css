@@ -1464,6 +1464,7 @@ p {
 }
 
 @media (min-width: 769px) and (max-width:1023px) {
+    /*INDEX*/
     .container-header {
         height: var(--header-height-tablet-laptop);
     }
@@ -1472,10 +1473,8 @@ p {
         margin-block-start: 0.2em;
         max-width: calc(100% - (3em + 43px));
     }
-}
-
-@media (min-width: 769px) and (max-width: 1023px) {
-
+    /*INDEX*/
+    /*UNIVERSAL HERO*/
     .main-gallery-wrapper #bg_image,
     .main-hero-section-wrapper #bg_image {
         height: calc(100vh - var(--header-height-tablet-laptop));
@@ -1486,9 +1485,91 @@ p {
         width: 50px;
         height: 50px;
     }
+    /*UNIVERSAL HERO*/
+    /*FOOTER*/
+    .container-footer>* {
+        width: 70%;
+    }
+
+    .logo-image {
+        width: 280px;
+    }
+
+    .footer-right,
+    .footer-left {
+        width: 50%;
+    }
+    /*FOOTER*/
+    /*MENU*/
+    .col-header {
+        width: 90%;
+    }
+
+    .menu-col1 li,
+    .menu-col2 li {
+        width: 90%;
+    }
+
+    .col-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .col-header span {
+        font-size: 1.5rem;
+    }
+    /*MENU*/
 }
 
 @media (max-width: 1024px) {
+    /*NEWSLETTER, CONTACT, ABOUT_US*/
+    .main-news-text,
+    .main-contact-text {
+        text-align: center;
+        padding-inline: 1em;
+    }
+
+    .main-news-wrapper,
+    .main-contact-wrapper {
+        width: 90%;
+        margin: var(--content-margin-v) auto;
+    }
+
+    .main-story-wrapper {
+        width: 90%;
+        margin: var(--content-margin-h) auto;
+    }
+
+    .main-news-form,
+    .main-contact-form {
+        grid-template-columns: auto;
+        place-items: center;
+    }
+
+    .main-story-text {
+        margin-block: var(--content-margin-v) 1.5em;
+        text-align: center
+    }
+
+    .main-story-text a {
+        margin: 0 auto;
+    }
+
+    .main-story-wrapper img {
+        width: 160px;
+        top: -5em;
+        right: -0.5em;
+    }
+
+    .main-news-input {
+        width: 95%;
+    }
+    /*NEWSLETTER, CONTACT, ABOUT_US*/
+    /*PRIVACY*/
+    .container-main-privacy {
+        margin: var(--content-margin-v) 1.5em;
+    }
+    /*PRIVACY*/
+    /*INDEX*/
     .main-prepare-wrapper {
         flex-direction: column-reverse;
         align-items: center;
@@ -1514,6 +1595,7 @@ p {
         text-align: center;
         line-height: 1.1;
     }
+    /*INDEX*/
 }
 
 @media (max-width: 500px) {
@@ -1574,76 +1656,6 @@ p {
     }
 }
 
-@media (max-width: 1024px) {
-
-    .main-news-text,
-    .main-contact-text {
-        text-align: center;
-        padding-inline: 1em;
-    }
-
-    .main-news-wrapper,
-    .main-contact-wrapper {
-        width: 90%;
-        margin: var(--content-margin-v) auto;
-    }
-
-    .main-story-wrapper {
-        width: 90%;
-        margin: var(--content-margin-h) auto;
-    }
-
-    .main-news-form,
-    .main-contact-form {
-        grid-template-columns: auto;
-        place-items: center;
-    }
-
-    .main-story-text {
-        margin-block: var(--content-margin-v) 1.5em;
-        text-align: center
-    }
-
-    .main-story-text a {
-        margin: 0 auto;
-    }
-
-    .main-story-wrapper img {
-        width: 160px;
-        top: -5em;
-        right: -0.5em;
-    }
-
-    .main-news-input {
-        width: 95%;
-    }
-}
-
-
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .container-footer>* {
-        width: 70%;
-    }
-
-    .logo-image {
-        width: 280px;
-    }
-
-    .footer-right,
-    .footer-left {
-        width: 50%;
-    }
-}
-
-@media (max-width: 1024px) {
-    .container-main-privacy {
-        margin: var(--content-margin-v) 1.5em;
-    }
-}
-
-
-
 @media (max-width: 1140px) {
     .main-about-ogs-wrapper {
         margin: var(--content-margin-h) 1.5em;
@@ -1680,7 +1692,6 @@ p {
         width: 300px;
     }
 }
-
 
 @media (min-width: 320px) and (max-width: 425px) {
 
@@ -1720,24 +1731,5 @@ p {
     .menu-col1 li,
     .menu-col2 li {
         width: 70%;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1000px) {
-    .col-header {
-        width: 90%;
-    }
-
-    .menu-col1 li,
-    .menu-col2 li {
-        width: 90%;
-    }
-
-    .col-header h2 {
-        font-size: 1.3rem;
-    }
-
-    .col-header span {
-        font-size: 1.5rem;
     }
 }
