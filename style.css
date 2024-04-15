@@ -4,7 +4,6 @@
 /* @link https://utopia.fyi/clamp/calculator?a=320,1024,16—20 */
 /* https://www.cssportal.com/css-clip-path-generator/ */
 /* https://www.freeprivacypolicy.com/live/8c4de919-c79d-4ff8-a04e-9f22cae672b4 */
-@import url(design.css);
 
 :root {
     --breakpoint-mobile-m: 375px;
@@ -301,6 +300,51 @@ button {
 .reverse-rotate-and-hide,
 .reverse-rotate-and-show {
     animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+
+.mobile-layout-header{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+@keyframes transparentToBlack {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+@keyframes blackToTransparent {
+    0% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+.transparent-to-black {
+    animation-name: transparentToBlack;
+}
+.black-to-transparent{
+    animation-name: blackToTransparent;
+}
+.transparent-to-black{
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+.black-to-transparent {
+    animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
 }
 
