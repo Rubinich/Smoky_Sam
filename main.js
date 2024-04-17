@@ -92,15 +92,32 @@ function closeMenu() {
     }, 500);
 }
 
+
+
 function sendMail(event) {
     const triggerButton = event.target;
     const isContactForm = triggerButton.id === "submit-contact";
+    let isValid = true;
+
     if (isContactForm) {
         const firstName = document.getElementById("first-name-contact").value;
         const lastName = document.getElementById("last-name-contact").value;
         const email = document.getElementById("email-contact").value;
         const phone = document.getElementById("phone-number-contact").value;
         const message = document.getElementById("message-contact").value;
+
+        if (firstName === "") {
+            showAlert("Please enter your first name and try again.");
+            isValid = false;
+        } else if (!/^[\d\-\+\(\) \[\]]{10,14}$/.test(phone)) {
+            showAlert("Please enter your valid phone number and try again.");
+            isValid = false;
+        }
+        else if (message === "") {
+            showAlert("Please enter your message and try again.");
+            isValid = false;
+        }
+
         const para = {
             first_name: firstName,
             last_name: lastName,
@@ -108,7 +125,9 @@ function sendMail(event) {
             phone_number: phone,
             message: message,
         };
-        emailjs.send("service_uc7h4s8", "template_njcn8yl", para)
+
+        if(isValid){
+            emailjs.send("service_uc7h4s8", "template_njcn8yl", para)
             .then(function (response) {
                 showAlert("Subscription successful!");
                 document.getElementById("first-name-contact").value = "";
@@ -118,19 +137,27 @@ function sendMail(event) {
                 document.getElementById("message-contact").value = "";
             })
             .catch(function (error) {
-                showAlert("An error occurred while subscribing. Please try again later.");
+                showAlert("An error occurred while subscribing. Please try again.");
             });
-        event.preventDefault();
+            event.preventDefault();
+        }
     } else {
         const firstName = document.getElementById("first-name-news").value;
         const lastName = document.getElementById("last-name-news").value;
         const email = document.getElementById("email-news").value;
+
+        if(firstName === ""){
+            showAlert("Please enter your first name and try again.");
+            isValid = false;
+        }
+
         const para = {
             first_name: firstName,
             last_name: lastName,
             email: email,
         };
-        emailjs.send("service_1zzkt2m", "template_3rwzcf6", para)
+        if(isValid){
+            emailjs.send("service_1zzkt2m", "template_3rwzcf6", para)
             .then(function (response) {
                 showAlert("Subscription successful!");
                 document.getElementById("first-name-news").value = "";
@@ -138,11 +165,18 @@ function sendMail(event) {
                 document.getElementById("email-news").value = "";
             })
             .catch(function (error) {
-                showAlert("An error occurred while subscribing. Please try again later.");
+                showAlert("An error occurred while subscribing. Please try again.");
             });
         event.preventDefault();
+        }
     }
 }
+
+
+
+
+
+
 
 function showAlert(message) {
     const alert = document.getElementById("custom-alert");
@@ -237,6 +271,3 @@ if (viewOffer) {
         });
     });
 }
-
-
-

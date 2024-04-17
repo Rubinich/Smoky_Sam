@@ -806,6 +806,11 @@ main {
     gap: 0.5em;
 }
 
+input:required, textarea:required {
+    border: 3px solid var(--clr-yellow);
+}
+
+
 .main-news-input {
     font-family: "oswald-regular", system-ui;
     font-weight: 400;
@@ -1366,38 +1371,46 @@ p {
 
 /************************************MENU-PAGE************************************/
 @media (max-width: 768px) {
+
     /*INDEX*/
     .container-header {
         justify-content: space-between;
         height: var(--header-height-phone-tablet);
     }
+
     .desktop-layout-menu {
         display: none;
     }
+
     .mobile-layout-menu,
     .mobile-layout-menu .close-button,
     .open-button {
         display: block;
     }
+
     .container-header #restaurant_logo {
         margin-block-start: 0.2em;
         max-width: calc(100% - (3em + 43px));
     }
+
     /*INDEX*/
     /*UNIVERSAL HERO*/
     .text-container-layout,
     .text-container-hero-layout {
         width: 90%;
     }
+
     .main-gallery-wrapper #bg_image,
     .main-hero-section-wrapper #bg_image {
         height: calc(100vh - var(--header-height-phone-tablet));
     }
+
     .main-gallery-wrapper #arrow_down,
     .main-hero-section-wrapper #arrow_down {
         width: 50px;
         height: 50px;
     }
+
     /*UNIVERSAL HERO*/
     /*FOOTER*/
     .container-footer {
@@ -1405,16 +1418,20 @@ p {
         flex-direction: column;
         gap: 0.5em;
     }
+
     .footer-right {
         width: 90%;
     }
+
     .logo-image {
         width: 280px;
     }
+
     .footer-left {
         width: 100%;
         margin-inline: 1.5em;
     }
+
     /*FOOTER*/
     /*CONTACT*/
     .main-info-wrapper {
@@ -1423,29 +1440,35 @@ p {
         justify-content: center;
         margin: var(--content-margin-v) 1.5em;
     }
+
     .main-info-location {
         width: 100%;
     }
+
     .main-info-text {
         width: 80%;
         text-align: center;
         margin-block-end: 3em;
     }
+
     .main-info-location iframe {
         width: 100%;
     }
+
     /*CONTACT*/
     /*ABOUT_US*/
     .main-about-story-wrapper {
         margin: var(--content-margin-h) 1.5em;
         grid-gap: 25em;
     }
+
     .main-about-story-wrapper>div {
         width: 100%;
         border-radius: var(--border-radius);
         padding: 1.5em;
         text-align: center;
     }
+
     #story_img1,
     #story_img2,
     #story_img3,
@@ -1456,14 +1479,17 @@ p {
         width: 225px;
         height: 225px;
     }
+
     .main-story-section3,
     .main-story-section5 {
         margin-block-start: 15em;
     }
+
     /*ABOUT_US*/
 }
 
 @media (min-width: 769px) and (max-width:1023px) {
+
     /*INDEX*/
     .container-header {
         height: var(--header-height-tablet-laptop);
@@ -1473,6 +1499,7 @@ p {
         margin-block-start: 0.2em;
         max-width: calc(100% - (3em + 43px));
     }
+
     /*INDEX*/
     /*UNIVERSAL HERO*/
     .main-gallery-wrapper #bg_image,
@@ -1485,6 +1512,7 @@ p {
         width: 50px;
         height: 50px;
     }
+
     /*UNIVERSAL HERO*/
     /*FOOTER*/
     .container-footer>* {
@@ -1499,6 +1527,7 @@ p {
     .footer-left {
         width: 50%;
     }
+
     /*FOOTER*/
     /*MENU*/
     .col-header {
@@ -1517,10 +1546,12 @@ p {
     .col-header span {
         font-size: 1.5rem;
     }
+
     /*MENU*/
 }
 
 @media (max-width: 1024px) {
+
     /*NEWSLETTER, CONTACT, ABOUT_US*/
     .main-news-text,
     .main-contact-text {
@@ -1563,11 +1594,13 @@ p {
     .main-news-input {
         width: 95%;
     }
+
     /*NEWSLETTER, CONTACT, ABOUT_US*/
     /*PRIVACY*/
     .container-main-privacy {
         margin: var(--content-margin-v) 1.5em;
     }
+
     /*PRIVACY*/
     /*INDEX*/
     .main-prepare-wrapper {
@@ -1595,6 +1628,7 @@ p {
         text-align: center;
         line-height: 1.1;
     }
+
     /*INDEX*/
 }
 
