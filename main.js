@@ -99,7 +99,7 @@ function sendMail(event) {
     const isContactForm = triggerButton.id === "submit-contact";
     let isValid = true;
     const nameCheck = /^[a-zA-ZšćčžđŠĆČŽĐ. ]+$/;
-    const phoneCheck = /^[\d\-\+\(\) \[\]]{10,14}$/;
+    const phoneCheck = /^[\d\-\+\(\) \[\]]{10,15}$/;
 
     if (isContactForm) {
         const firstName = document.getElementById("first-name-contact").value;
@@ -116,7 +116,7 @@ function sendMail(event) {
             isValid = false;
         }
         else if (phone === "" || !phoneCheck.test(phone)) {
-            showAlert("Please enter your valid phone number and try again.");
+            showAlert("Please enter your valid phone number (10-15 characters, digits, hyphen, plus sign, parenthesis, brackets).");
             isValid = false;
         } else if(email === ""){
             showAlert("Please enter your valid email address and try again.");
