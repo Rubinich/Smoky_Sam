@@ -114,9 +114,8 @@ function sendMail(event) {
         } else if (!nameCheck.test(lastName) || lastName === ""){
             showAlert("Please enter a valid last name (letters, dots, and spaces only).");
             isValid = false;
-        }
-        else if (phone === "" || !phoneCheck.test(phone)) {
-            showAlert("Please enter your valid phone number (10-15 characters, digits, hyphen, plus sign, parenthesis, brackets).");
+        } else if (phone === "" || !phoneCheck.test(phone)) {
+            showAlert("Please enter your valid phone number (10-15 characters, digits, hyphen, plus sign, parenthesis and brackets only).");
             isValid = false;
         } else if(email === ""){
             showAlert("Please enter your valid email address and try again.");
