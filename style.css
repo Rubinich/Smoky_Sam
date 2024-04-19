@@ -37,6 +37,7 @@
     --clr-black: #000000;
     --clr-grey: #61677A;
     --clr-light-grey: #A9A9A9;
+    --clr-story_back: #FFEC9E;
 }
 
 @font-face {
@@ -1204,7 +1205,7 @@ p {
     position: relative;
     width: 50%;
     padding: 2.5em 3em;
-    background-color: #FBF3D5;
+    background-color: var(--clr-story_back);
     outline: 3px solid black;
 }
 
@@ -1244,7 +1245,7 @@ p {
     box-sizing: unset;
     object-fit: cover;
     object-position: center;
-    border: 20px solid #FBF3D5;
+    border: 20px solid var(--clr-story_back);
     outline: 3px solid black;
 }
 
