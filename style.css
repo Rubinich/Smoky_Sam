@@ -625,9 +625,8 @@ main {
     text-transform: uppercase;
 }
 
-.main-limited-text h3 {
-    display: block;
-    margin-block: 1.5em;
+.main-limited-text p{
+    margin-top: 1.5em;
 }
 
 #carousel {
