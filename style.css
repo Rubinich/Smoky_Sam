@@ -41,40 +41,12 @@
 }
 
 @font-face {
-    font-family: "oswald-bold";
-    src:
-        url("./assets/fonts/oswald-bold-webfont.woff2") format("woff2"),
-        url("./assets/fonts/oswald-bold-webfont.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "oswald-extralight";
-    src:
-        url("./assets/fonts/oswald-extralight-webfont.woff2") format("woff2"),
-        url("./assets/fonts/oswald-extralight-webfont.woff") format("woff");
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
     font-family: "oswald-light";
     src:
         url("./assets/fonts/oswald-light-webfont.woff2") format("woff2"),
         url("./assets/fonts/oswald-light-webfont.woff") format("woff");
     font-weight: 300;
     font-style: normal;
-}
-
-@font-face {
-    font-family: "oswald-medium";
-    src:
-        url("./assets/fonts/oswald-medium-webfont.woff2") format("woff2"),
-        url("./assets/fonts/oswald-medium-webfont.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-    ;
 }
 
 @font-face {
