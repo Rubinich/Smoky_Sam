@@ -949,6 +949,7 @@ footer {
     font-size: 0.8rem;
     padding: 0.25em 1em 0.75em 1em;
     line-height: 1;
+    border: 3px solid red
 }
 #images a:hover{
     text-decoration: underline;
