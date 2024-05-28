@@ -1728,7 +1728,7 @@ p {
     }
 
     .main-menu-wrapper {
-        margin: var(--content-margin-h) 1.5em;
+        margin: var(--content-margin-h) 1.25em;
     }
 
     .main-menu-section {
@@ -1757,6 +1757,6 @@ p {
 
     .menu-col1 li,
     .menu-col2 li {
-        width: 70%;
+        width: 350px;
     }
 }
