@@ -211,7 +211,7 @@ buttons.forEach(button => {
         const offset = button.id === "after-button" ? 1 : -1;
         const slides = document.getElementById("carousel").querySelector("#images");
         const activeSlide = slides.querySelector(".active")
-        let nextIndex = [...slides.children].indexOf(activeSlide) + offset
+        let nextIndex = Array.from(slides.children).indexOf(activeSlide) + offset
         if (nextIndex < 0) {
             nextIndex = slides.children.length - 1
         }

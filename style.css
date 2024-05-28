@@ -1,7 +1,5 @@
-/* @link https://utopia.fyi/clamp/calculator?a=320,1024,41—70 */
-/* @link https://utopia.fyi/clamp/calculator?a=320,1024,16—30 */
-/* @link https://utopia.fyi/clamp/calculator?a=320,1024,14—16 */
-/* @link https://utopia.fyi/clamp/calculator?a=320,1024,16—20 */
+
+
 /* https://www.cssportal.com/css-clip-path-generator/ */
 /* https://www.freeprivacypolicy.com/live/8c4de919-c79d-4ff8-a04e-9f22cae672b4 */
 
@@ -28,9 +26,13 @@
     --font-size-h2: 2rem;
     --font-size-h2-span: 2.3rem;
 
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1024,41—70 */
     --fluid-41-70: clamp(2.5625rem, 1.7386rem + 4.1193vi, 4.375rem);
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1024,16—30 */
     --fluid-16-30: clamp(1rem, 0.6023rem + 1.9886vi, 1.875rem);
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1024,14—16 */
     --fluid-14-16: clamp(0.875rem, 0.8182rem + 0.2841vi, 1rem);
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1024,16—20 */
     --fluid-16-20: clamp(1rem, 0.8864rem + 0.5682vi, 1.25rem);
 
     --clr-white: #FCFCFC;
