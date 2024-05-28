@@ -132,7 +132,7 @@ function sendMail(event) {
             phone_number: phone,
             message: message,
         };
-
+        /* https://www.emailjs.com/docs/sdk/send/ */
         if(isValid){
             emailjs.send("service_uc7h4s8", "template_njcn8yl", para)
             .then(function (response) {
@@ -184,12 +184,6 @@ function sendMail(event) {
         }
     }
 }
-
-
-
-
-
-
 
 function showAlert(message) {
     const alert = document.getElementById("custom-alert");
