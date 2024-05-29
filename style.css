@@ -1278,7 +1278,6 @@ p {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 1em;
 }
 
 .main-menu-nav .menuBtn {
@@ -1329,11 +1328,16 @@ p {
 }
 
 .col-header h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-family: "roboto-regular", system-ui;
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 1.1;
     text-transform: uppercase;
+    height: 130px;
 }
 
 .col-header span {
@@ -1574,14 +1578,7 @@ p {
     .menu-col1 li,
     .menu-col2 li {
         width: 90%;
-    }
-
-    .col-header h2 {
-        font-size: 1.3rem;
-    }
-
-    .col-header span {
-        font-size: 1.5rem;
+        height: 400px;
     }
 
     /*MENU*/
