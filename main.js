@@ -47,10 +47,8 @@ const mobileMenuLayout = document.querySelector(".mobile-layout-header");
 function openMenu() {
     document.body.classList.add("no-scrolling");
     openBtn.classList.add("rotate-and-hide");
-    //
     mobileMenuLayout.style.zIndex = 4;
     mobileMenuLayout.classList.add("transparent-to-black");
-    //
     closeBtn.classList.add("rotate-and-show");
     setTimeout(() => {
         openBtn.style.display = "none";
@@ -65,10 +63,8 @@ function openMenu() {
 function closeMenu() {
     closeBtn.classList.add("reverse-rotate-and-show");
     openBtn.classList.add("reverse-rotate-and-hide");
-    //
     mobileMenuLayout.classList.remove("transparent-to-black");
     mobileMenuLayout.classList.add("black-to-transparent");
-    //
     setTimeout(() => {
         openBtn.style.display = "block";
         closeBtn.style.display = "none";
@@ -80,10 +76,8 @@ function closeMenu() {
                 isOpenMenuComplete = false;
                 isCloseMenuComplete = false;
             }
-            //
             mobileMenuLayout.style.zIndex = -1;
             mobileMenuLayout.classList.remove("black-to-transparent");
-            //
         }, 500);
         closeBtn.classList.remove("reverse-rotate-and-show");
         openBtn.classList.remove("reverse-rotate-and-hide");
@@ -134,6 +128,7 @@ function sendMail(event) {
         };
         /* https://www.emailjs.com/docs/sdk/send/ */
         if(isValid){
+            event.preventDefault();
             emailjs.send("service_uc7h4s8", "template_njcn8yl", para)
             .then(function (response) {
                 showAlert("Subscription successful!");
@@ -146,7 +141,7 @@ function sendMail(event) {
             .catch(function (error) {
                 showAlert("An error occurred while subscribing. Please try again.");
             });
-            event.preventDefault();
+            
         }
     } else {
         const firstName = document.getElementById("first-name-news").value;
@@ -170,6 +165,7 @@ function sendMail(event) {
             email: email,
         };
         if(isValid){
+            event.preventDefault();
             emailjs.send("service_1zzkt2m", "template_3rwzcf6", para)
             .then(function (response) {
                 showAlert("Subscription successful!");
@@ -180,7 +176,6 @@ function sendMail(event) {
             .catch(function (error) {
                 showAlert("An error occurred while subscribing. Please try again.");
             });
-        event.preventDefault();
         }
     }
 }
