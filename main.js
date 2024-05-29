@@ -47,17 +47,20 @@ const mobileMenuLayout = document.querySelector(".mobile-layout-header");
 function openMenu() {
     openBtn.classList.add("disabled");
     closeBtn.classList.add("disabled"); 
+
     document.body.classList.add("no-scrolling");
     openBtn.classList.add("rotate-and-hide");
     mobileMenuLayout.style.zIndex = 4;
     mobileMenuLayout.classList.add("transparent-to-black");
     closeBtn.classList.add("rotate-and-show");
+
     setTimeout(() => {
         openBtn.style.display = "none";
         closeBtn.style.display = "block";
         isOpenMenuComplete = true;
         openBtn.classList.remove("rotate-and-hide");
         closeBtn.classList.remove("rotate-and-show");
+
         openBtn.classList.remove("disabled");
         closeBtn.classList.remove("disabled");
     }, 500);
@@ -67,10 +70,12 @@ function openMenu() {
 function closeMenu() {
     openBtn.classList.add("disabled");
     closeBtn.classList.add("disabled"); 
+
     closeBtn.classList.add("reverse-rotate-and-show");
     openBtn.classList.add("reverse-rotate-and-hide");
     mobileMenuLayout.classList.remove("transparent-to-black");
     mobileMenuLayout.classList.add("black-to-transparent");
+
     setTimeout(() => {
         openBtn.style.display = "block";
         closeBtn.style.display = "none";
@@ -84,6 +89,7 @@ function closeMenu() {
             }
             mobileMenuLayout.style.zIndex = -1;
             mobileMenuLayout.classList.remove("black-to-transparent");
+            
             openBtn.classList.remove("disabled");
             closeBtn.classList.remove("disabled");
         }, 500);
