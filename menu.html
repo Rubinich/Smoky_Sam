@@ -251,6 +251,10 @@
     </footer>
     <script src="main.js"></script>
     <script>
+        const menuLimitedSection = document.getElementById("menuLimited");
+        const menuBasicSection = document.getElementById("menuBasic");
+        const menuLimitedBtn = document.getElementById("menuLimitedBtn");
+        const menuBasicBtn = document.getElementById("menuBasicBtn");
         document.addEventListener("DOMContentLoaded", function () {
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.has("flag")) {

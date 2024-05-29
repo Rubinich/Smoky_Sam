@@ -260,10 +260,6 @@ if (menuBtns) {
 
 
 const viewOffer = document.querySelectorAll(".view_offer");
-const menuLimitedSection = document.getElementById("menuLimited");
-const menuBasicSection = document.getElementById("menuBasic");
-const menuLimitedBtn = document.getElementById("menuLimitedBtn");
-const menuBasicBtn = document.getElementById("menuBasicBtn");
 
 if (viewOffer) {
     viewOffer.forEach(button => {
