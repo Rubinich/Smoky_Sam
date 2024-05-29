@@ -188,6 +188,11 @@ button {
     translate: 100%;
 }
 
+.disabled {
+    pointer-events: none;
+}
+
+
 .open-button,
 .mobile-layout-menu .close-button {
     display: none;
@@ -1409,6 +1414,7 @@ p {
     height: 40px;
     cursor: pointer;
 }
+
 
 /************************************WARNING************************************/
 @media (max-width: 768px) {
