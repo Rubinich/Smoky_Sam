@@ -117,10 +117,10 @@ function sendMail(event) {
         const message = document.getElementById("message-contact").value;
 
         if (firstName === "" || !nameCheck.test(firstName)) {
-            showAlert("Please enter a valid first name (letters, dots, and spaces only).");
+            showAlert("Please enter a valid first name (letters and spaces only).");
             isValid = false;
         } else if (!nameCheck.test(lastName) || lastName === ""){
-            showAlert("Please enter a valid last name (letters, dots, and spaces only).");
+            showAlert("Please enter a valid last name (letters and spaces only).");
             isValid = false;
         } else if (phone === "" || !phoneCheck.test(phone)) {
             showAlert("Please enter your valid phone number (10-15 characters, digits, hyphen, plus sign, parenthesis and brackets only).");
@@ -163,10 +163,10 @@ function sendMail(event) {
         const email = document.getElementById("email-news").value;
 
         if (firstName === "" || !nameCheck.test(firstName)) {
-            showAlert("Please enter a valid first name (letters, dots, and spaces only).");
+            showAlert("Please enter a valid first name (letters and spaces only).");
             isValid = false;
         } else if (lastName === "" || !nameCheck.test(lastName)) {
-            showAlert("Please enter a valid last name (letters, dots, and spaces only).");
+            showAlert("Please enter a valid last name (letters and spaces only).");
             isValid = false;
         } else if(email === ""){
             showAlert("Please enter your valid email address and try again.");
