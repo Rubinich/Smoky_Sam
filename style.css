@@ -1788,6 +1788,12 @@ p {
     .menu-col2 {
         width: 100%;
     }
+    .text-container h2{
+        line-height: 1.2;
+    }
+    .text-container h3{
+        width: 80%;
+    }
 }
 
 @media (min-width:425px) and (max-width: 768px) {
