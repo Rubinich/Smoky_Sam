@@ -103,8 +103,7 @@ function closeMenu() {
 
 
 function sendMail(event) {
-    const triggerButton = event.target;
-    const isContactForm = triggerButton.id === "submit-contact";
+    const isContactForm = event.target.id === "submit-contact";
     let isValid = true;
     const nameCheck = /^[a-zA-ZšćčžđŠĆČŽĐ. ]+$/;
     const phoneCheck = /^[\d\-\+\(\) \[\]]{10,15}$/;
